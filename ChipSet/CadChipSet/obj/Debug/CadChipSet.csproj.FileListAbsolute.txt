@@ -1,0 +1,12 @@
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\bin\Debug\CadChipSet.dll.config
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\bin\Debug\CadChipSet.dll
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\bin\Debug\CadChipSet.pdb
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\bin\Debug\EntityFramework.dll
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\bin\Debug\EntityFramework.xml
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\obj\Debug\CadChipSet.csproj.AssemblyReference.cache
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\obj\Debug\CadChipSet.csproj.CoreCompileInputs.cache
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\obj\Debug\CadChipSet.csproj.Up2Date
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\obj\Debug\CadChipSet.dll
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CadChipSet\obj\Debug\CadChipSet.pdb
