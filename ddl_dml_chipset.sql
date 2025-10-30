@@ -86,8 +86,7 @@ DROP PROC IF EXISTS paProductoListar;
 GO
 CREATE PROC paProductoListar @parametro VARCHAR(50) 
 AS
-SELECT  p.id,p.nombre AS Nombre_Producto,p.descripcion,p.precioVenta AS Precio_Venta, p.stock,  
-        pr.nombre AS Nombre_Proveedor, 
+SELECT  p.id,p.idProveedor,p.nombre,pr.nombre as nombreProveedor,p.descripcion,p.precioVenta, p.stock,
         p.usuarioRegistro,
         p.fechaRegistro, 
         p.estado
@@ -97,11 +96,7 @@ SELECT  p.id,p.nombre AS Nombre_Producto,p.descripcion,p.precioVenta AS Precio_V
         Proveedor pr ON pr.id = p.idProveedor 
     WHERE 
         p.estado >- 1
-        AND (
-            p.nombre LIKE '%' + @parametro + '%' 
-            OR p.descripcion LIKE '%' + @parametro + '%'
-            OR pr.nombre LIKE '%' + @parametro + '%' 
-        )
+       AND p.nombre+p.descripcion+pr.nombre LIKE '%'+REPLACE(@parametro,' ','%')+'%'
     ORDER BY 
         p.estado DESC, p.nombre ASC;
 
@@ -126,6 +121,7 @@ INSERT INTO Producto (idProveedor, nombre, descripcion, precioVenta, stock) VALU
 (2, 'Tarjeta Gráfica RTX 4060', '8GB GDDR6, ideal para gaming', 349.99, 45),
 (2, 'Procesador Ryzen 5 5600', 'CPU de 6 núcleos y 12 hilos', 125.00, 60);
 
+select * from Producto;
 
 EXEC paProductoListar '';
 

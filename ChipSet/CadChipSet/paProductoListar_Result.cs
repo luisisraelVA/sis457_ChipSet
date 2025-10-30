@@ -14,11 +14,12 @@ namespace CadChipSet
     public partial class paProductoListar_Result
     {
         public int id { get; set; }
-        public string Nombre_Producto { get; set; }
+        public int idProveedor { get; set; }
+        public string nombre { get; set; }
+        public string nombreProveedor { get; set; }
         public string descripcion { get; set; }
-        public decimal Precio_Venta { get; set; }
+        public decimal precioVenta { get; set; }
         public int stock { get; set; }
-        public string Nombre_Proveedor { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }

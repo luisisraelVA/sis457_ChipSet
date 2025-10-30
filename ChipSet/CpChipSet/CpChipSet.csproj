@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0EF12CE-6C9A-4C04-9CC2-0BAA4A1385B9}</ProjectGuid>
+    <ProjectGuid>{BFFCF1EF-B92E-4A29-A18E-D7086927883C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CpChipSet</RootNamespace>
     <AssemblyName>CpChipSet</AssemblyName>
@@ -93,16 +93,34 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CadChipSet\CadChipSet.csproj">
-      <Project>{e4ce67c0-82f2-45a9-a6be-9ce6419d4897}</Project>
+      <Project>{d085dbaa-4109-4d3c-898a-da4d6c955c22}</Project>
       <Name>CadChipSet</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClnChipSet\ClnChipSet.csproj">
-      <Project>{21495bc5-66e0-40b7-84a4-ba914ae291d2}</Project>
+      <Project>{b95c5691-4f98-43e0-b90d-64efc34fe960}</Project>
       <Name>ClnChipSet</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

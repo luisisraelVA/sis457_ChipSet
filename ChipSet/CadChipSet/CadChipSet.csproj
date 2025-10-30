@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4CE67C0-82F2-45A9-A6BE-9CE6419D4897}</ProjectGuid>
+    <ProjectGuid>{D085DBAA-4109-4D3C-898A-DA4D6C955C22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CadChipSet</RootNamespace>

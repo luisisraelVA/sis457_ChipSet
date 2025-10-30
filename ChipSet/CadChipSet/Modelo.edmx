@@ -291,11 +291,12 @@
         </Association>
         <ComplexType Name="paProductoListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
-          <Property Type="String" Name="Nombre_Producto" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="idProveedor" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="nombreProveedor" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="descripcion" Nullable="false" MaxLength="200" />
-          <Property Type="Decimal" Name="Precio_Venta" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="precioVenta" Nullable="false" Precision="18" Scale="0" />
           <Property Type="Int32" Name="stock" Nullable="false" />
-          <Property Type="String" Name="Nombre_Proveedor" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
@@ -377,11 +378,12 @@
             <ResultMapping>
               <ComplexTypeMapping TypeName="LabChipSetModel.paProductoListar_Result">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="Nombre_Producto" ColumnName="Nombre_Producto" />
+                <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nombreProveedor" ColumnName="nombreProveedor" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="Precio_Venta" ColumnName="Precio_Venta" />
+                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
                 <ScalarProperty Name="stock" ColumnName="stock" />
-                <ScalarProperty Name="Nombre_Proveedor" ColumnName="Nombre_Proveedor" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />

@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21495BC5-66E0-40B7-84A4-BA914AE291D2}</ProjectGuid>
+    <ProjectGuid>{B95C5691-4F98-43E0-B90D-64EFC34FE960}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClnChipSet</RootNamespace>
@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CadChipSet\CadChipSet.csproj">
-      <Project>{e4ce67c0-82f2-45a9-a6be-9ce6419d4897}</Project>
+      <Project>{d085dbaa-4109-4d3c-898a-da4d6c955c22}</Project>
       <Name>CadChipSet</Name>
     </ProjectReference>
   </ItemGroup>

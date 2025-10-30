@@ -45,7 +45,7 @@ namespace ClnChipSet
             }
         }
 
-        public static Producto obterUno(int id)
+        public static Producto obtenerUno(int id)
         {
             using (var context = new LabChipSetEntities())
             {
@@ -53,11 +53,11 @@ namespace ClnChipSet
             }
         }
 
-        public static List<Producto> listar()
+        public static List<Producto>listar()
         {
             using (var context = new LabChipSetEntities())
             {
-                return context.Producto.Where(x=>x.estado == 1).ToList();
+                return context.Producto.Where(x => x.estado == 1).ToList();
             }
         }
 

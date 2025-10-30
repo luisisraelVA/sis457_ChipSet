@@ -72,11 +72,12 @@
       <ResultMapping>
         <ComplexTypeMapping TypeName="LabChipSetModel.paProductoListar_Result">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="Nombre_Producto" ColumnName="Nombre_Producto" />
+          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="nombreProveedor" ColumnName="nombreProveedor" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="Precio_Venta" ColumnName="Precio_Venta" />
+          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
           <ScalarProperty Name="stock" ColumnName="stock" />
-          <ScalarProperty Name="Nombre_Proveedor" ColumnName="Nombre_Proveedor" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
