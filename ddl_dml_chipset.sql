@@ -18,6 +18,7 @@ DROP TABLE IF EXISTS Cliente;
 DROP TABLE IF EXISTS Proveedor;
 DROP TABLE IF EXISTS Pedido;
 DROP TABLE IF EXISTS DetallePedido;
+DROP TABLE IF EXISTS Usuario;
 
 CREATE TABLE Proveedor (
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
@@ -56,6 +57,11 @@ CREATE TABLE DetallePedido (
     CONSTRAINT fk_DetallePedido_Pedido FOREIGN KEY (idPedido) REFERENCES Pedido(id),
     CONSTRAINT fk_DetallePedido_Producto FOREIGN KEY (idProducto) REFERENCES Producto(id)
 );
+CREATE TABLE Usuario (
+    id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+    usuario VARCHAR(50) UNIQUE NOT NULL,
+    clave VARCHAR(255) NOT NULL,
+    );
 
 ALTER TABLE Proveedor ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Proveedor ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -77,7 +83,9 @@ ALTER TABLE DetallePedido ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER
 ALTER TABLE DetallePedido ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE DetallePedido ADD estado SMALLINT NOT NULL DEFAULT 1;
 
-
+ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
 
 
@@ -120,6 +128,9 @@ INSERT INTO Producto (idProveedor, nombre, descripcion, precioVenta, stock) VALU
 (1, 'Disco SSD M.2 500GB', 'Unidad de estado sólido NVMe, 500GB', 35.99, 80),
 (2, 'Tarjeta Gráfica RTX 4060', '8GB GDDR6, ideal para gaming', 349.99, 45),
 (2, 'Procesador Ryzen 5 5600', 'CPU de 6 núcleos y 12 hilos', 125.00, 60);
+
+INSERT INTO Usuario(usuario,clave)
+VALUES ('jperez', 'i0hcoO/nssY6WOs9pOp5Xw=='); -- Clave: hola123
 
 select * from Producto;
 

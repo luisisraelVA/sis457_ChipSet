@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtParametro = new System.Windows.Forms.TextBox();
@@ -49,13 +50,25 @@
             this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.erpNombre = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpPrecioVenta = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpStock = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.cbxProveedor = new System.Windows.Forms.ComboBox();
+            this.erpProveedor = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbxListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.pnlAcciones.SuspendLayout();
             this.gbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpPrecioVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpProveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +98,7 @@
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(632, 32);
             this.txtParametro.TabIndex = 2;
+            this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
             // gbxListado
             // 
@@ -134,6 +148,7 @@
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEliminar
             // 
@@ -146,6 +161,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -158,6 +174,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -174,6 +191,8 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.cbxProveedor);
+            this.gbxDatos.Controls.Add(this.lblProveedor);
             this.gbxDatos.Controls.Add(this.btnCancelar);
             this.gbxDatos.Controls.Add(this.btnGuardar);
             this.gbxDatos.Controls.Add(this.nudStock);
@@ -215,17 +234,23 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // nudStock
             // 
-            this.nudStock.Location = new System.Drawing.Point(823, 64);
+            this.nudStock.Location = new System.Drawing.Point(568, 70);
             this.nudStock.Name = "nudStock";
             this.nudStock.Size = new System.Drawing.Size(120, 32);
             this.nudStock.TabIndex = 7;
             // 
             // nudPrecioVenta
             // 
-            this.nudPrecioVenta.Location = new System.Drawing.Point(823, 25);
+            this.nudPrecioVenta.Location = new System.Drawing.Point(568, 31);
+            this.nudPrecioVenta.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.nudPrecioVenta.Name = "nudPrecioVenta";
             this.nudPrecioVenta.Size = new System.Drawing.Size(120, 32);
             this.nudPrecioVenta.TabIndex = 6;
@@ -247,7 +272,7 @@
             // lblStock
             // 
             this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(631, 64);
+            this.lblStock.Location = new System.Drawing.Point(376, 70);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(73, 26);
             this.lblStock.TabIndex = 3;
@@ -256,7 +281,7 @@
             // lblPrecioVenta
             // 
             this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(631, 26);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(376, 32);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
             this.lblPrecioVenta.Size = new System.Drawing.Size(185, 26);
             this.lblPrecioVenta.TabIndex = 2;
@@ -280,6 +305,22 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
+            // erpNombre
+            // 
+            this.erpNombre.ContainerControl = this;
+            // 
+            // erpDescripcion
+            // 
+            this.erpDescripcion.ContainerControl = this;
+            // 
+            // erpPrecioVenta
+            // 
+            this.erpPrecioVenta.ContainerControl = this;
+            // 
+            // erpStock
+            // 
+            this.erpStock.ContainerControl = this;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Image = global::CpChipSet.Properties.Resources.search;
@@ -292,6 +333,27 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Location = new System.Drawing.Point(710, 28);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(118, 26);
+            this.lblProveedor.TabIndex = 9;
+            this.lblProveedor.Text = "Proveedor:";
+            // 
+            // cbxProveedor
+            // 
+            this.cbxProveedor.FormattingEnabled = true;
+            this.cbxProveedor.Location = new System.Drawing.Point(835, 25);
+            this.cbxProveedor.Name = "cbxProveedor";
+            this.cbxProveedor.Size = new System.Drawing.Size(199, 34);
+            this.cbxProveedor.TabIndex = 10;
+            // 
+            // erpProveedor
+            // 
+            this.erpProveedor.ContainerControl = this;
             // 
             // FrmProductos
             // 
@@ -321,6 +383,11 @@
             this.gbxDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpPrecioVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpProveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,6 +417,13 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ErrorProvider erpNombre;
+        private System.Windows.Forms.ErrorProvider erpDescripcion;
+        private System.Windows.Forms.ErrorProvider erpPrecioVenta;
+        private System.Windows.Forms.ErrorProvider erpStock;
+        private System.Windows.Forms.ComboBox cbxProveedor;
+        private System.Windows.Forms.Label lblProveedor;
+        private System.Windows.Forms.ErrorProvider erpProveedor;
     }
 }
 

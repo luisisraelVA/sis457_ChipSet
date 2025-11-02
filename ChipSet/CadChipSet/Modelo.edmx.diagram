@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="LabChipSetModel.Pedido" Width="1.5" PointX="3" PointY="5.125" />
         <EntityTypeShape EntityType="LabChipSetModel.Producto" Width="1.5" PointX="3" PointY="1" />
         <EntityTypeShape EntityType="LabChipSetModel.Proveedor" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="LabChipSetModel.Usuario" Width="1.5" PointX="5.75" PointY="5.75" />
         <AssociationConnector Association="LabChipSetModel.fk_Pedido_Cliente" />
         <AssociationConnector Association="LabChipSetModel.fk_DetallePedido_Pedido" />
         <AssociationConnector Association="LabChipSetModel.fk_DetallePedido_Producto" />

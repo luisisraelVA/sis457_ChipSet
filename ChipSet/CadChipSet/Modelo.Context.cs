@@ -32,6 +32,7 @@ namespace CadChipSet
         public virtual DbSet<Pedido> Pedido { get; set; }
         public virtual DbSet<Producto> Producto { get; set; }
         public virtual DbSet<Proveedor> Proveedor { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
     
         public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
         {

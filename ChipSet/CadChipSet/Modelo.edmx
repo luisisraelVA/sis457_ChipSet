@@ -67,6 +67,17 @@
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
         </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="clave" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="estado" Type="smallint" Nullable="false" />
+        </EntityType>
         <Association Name="fk_DetallePedido_Pedido">
           <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
           <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
@@ -124,6 +135,7 @@
           <EntitySet Name="Pedido" EntityType="Self.Pedido" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="fk_DetallePedido_Pedido" Association="Self.fk_DetallePedido_Pedido">
             <End Role="Pedido" EntitySet="Pedido" />
             <End Role="DetallePedido" EntitySet="DetallePedido" />
@@ -146,11 +158,15 @@
     <edmx:ConceptualModels>
       <Schema Namespace="LabChipSetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="LabChipSetEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="paProductoListar" ReturnType="Collection(LabChipSetModel.paProductoListar_Result)">
+          <Parameter Name="parametro" Mode="In" Type="String" />
+          </FunctionImport>
           <EntitySet Name="Cliente" EntityType="LabChipSetModel.Cliente" />
           <EntitySet Name="DetallePedido" EntityType="LabChipSetModel.DetallePedido" />
           <EntitySet Name="Pedido" EntityType="LabChipSetModel.Pedido" />
           <EntitySet Name="Producto" EntityType="LabChipSetModel.Producto" />
           <EntitySet Name="Proveedor" EntityType="LabChipSetModel.Proveedor" />
+          <EntitySet Name="Usuario" EntityType="LabChipSetModel.Usuario" />
           <AssociationSet Name="fk_Pedido_Cliente" Association="LabChipSetModel.fk_Pedido_Cliente">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Pedido" EntitySet="Pedido" />
@@ -167,10 +183,19 @@
             <End Role="Proveedor" EntitySet="Proveedor" />
             <End Role="Producto" EntitySet="Producto" />
           </AssociationSet>
-          <FunctionImport Name="paProductoListar" ReturnType="Collection(LabChipSetModel.paProductoListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
-          </FunctionImport>
-        </EntityContainer>
+          </EntityContainer>
+        <ComplexType Name="paProductoListar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="idProveedor" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="nombreProveedor" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="200" />
+          <Property Type="Decimal" Name="precioVenta" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="stock" Nullable="false" />
+          <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+          <Property Type="Int16" Name="estado" Nullable="false" />
+        </ComplexType>
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="id" />
@@ -241,6 +266,17 @@
           <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Producto" Relationship="LabChipSetModel.fk_Producto_Proveedor" FromRole="Proveedor" ToRole="Producto" />
         </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clave" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="usuarioRegistro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estado" Type="Int16" Nullable="false" />
+        </EntityType>
         <Association Name="fk_Pedido_Cliente">
           <End Type="LabChipSetModel.Cliente" Role="Cliente" Multiplicity="1" />
           <End Type="LabChipSetModel.Pedido" Role="Pedido" Multiplicity="*" />
@@ -289,24 +325,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="paProductoListar_Result">
-          <Property Type="Int32" Name="id" Nullable="false" />
-          <Property Type="Int32" Name="idProveedor" Nullable="false" />
-          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="nombreProveedor" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="200" />
-          <Property Type="Decimal" Name="precioVenta" Nullable="false" Precision="18" Scale="0" />
-          <Property Type="Int32" Name="stock" Nullable="false" />
-          <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
-          <Property Type="Int16" Name="estado" Nullable="false" />
-        </ComplexType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="LabChipSetModelStoreContainer" CdmEntityContainer="LabChipSetEntities">
+          <FunctionImportMapping FunctionImportName="paProductoListar" FunctionName="LabChipSetModel.Store.paProductoListar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabChipSetModel.paProductoListar_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nombreProveedor" ColumnName="nombreProveedor" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <EntitySetMapping Name="Cliente">
             <EntityTypeMapping TypeName="LabChipSetModel.Cliente">
               <MappingFragment StoreEntitySet="Cliente">
@@ -374,23 +414,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="paProductoListar" FunctionName="LabChipSetModel.Store.paProductoListar">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="LabChipSetModel.paProductoListar_Result">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="nombreProveedor" ColumnName="nombreProveedor" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
-                <ScalarProperty Name="stock" ColumnName="stock" />
-                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="LabChipSetModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="estado" ColumnName="estado" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-        </EntityContainerMapping>
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="clave" ColumnName="clave" />
+                <ScalarProperty Name="usuario1" ColumnName="usuario" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

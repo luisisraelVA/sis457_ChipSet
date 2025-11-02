@@ -34,7 +34,7 @@ namespace ClnChipSet
             }
         }
 
-        public static int eliminar(int id, string usuarioRegistro)
+        public static int eliminar(int id ,string usuarioRegistro)
         {
             using (var context = new LabChipSetEntities())
             {
@@ -52,6 +52,8 @@ namespace ClnChipSet
                 return context.Producto.Find(id);
             }
         }
+
+
 
         public static List<Producto>listar()
         {

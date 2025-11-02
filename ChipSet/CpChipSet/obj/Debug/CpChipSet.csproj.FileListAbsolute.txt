@@ -20,3 +20,5 @@ C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.csproj.U
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.exe
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.pdb
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.exe.config
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmAutenticacion.resources
+C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmPrincipal.resources
