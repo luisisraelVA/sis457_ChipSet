@@ -34,6 +34,24 @@ namespace CadChipSet
         public virtual DbSet<Proveedor> Proveedor { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     
+        public virtual ObjectResult<paClienteListar_Result> paClienteListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paClienteListar_Result>("paClienteListar", parametroParameter);
+        }
+    
+        public virtual ObjectResult<paPedidoListar_Result> paPedidoListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paPedidoListar_Result>("paPedidoListar", parametroParameter);
+        }
+    
         public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
         {
             var parametroParameter = parametro != null ?

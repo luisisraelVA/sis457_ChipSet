@@ -19,6 +19,7 @@ namespace ClnChipSet
             }
         }
 
+
         public static int actualizar(Producto producto)
         {
             using (var context = new LabChipSetEntities())
@@ -34,7 +35,7 @@ namespace ClnChipSet
             }
         }
 
-        public static int eliminar(int id ,string usuarioRegistro)
+        public static int eliminar(int id, string usuarioRegistro)
         {
             using (var context = new LabChipSetEntities())
             {
@@ -54,19 +55,11 @@ namespace ClnChipSet
         }
 
 
-
-        public static List<Producto>listar()
-        {
-            using (var context = new LabChipSetEntities())
-            {
-                return context.Producto.Where(x => x.estado == 1).ToList();
-            }
-        }
-
         public static List<paProductoListar_Result> listarPa(string parametro)
         {
             using (var context = new LabChipSetEntities())
             {
+ 
                 return context.paProductoListar(parametro).ToList();
             }
         }

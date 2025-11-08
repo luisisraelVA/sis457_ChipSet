@@ -185,12 +185,12 @@ namespace CpChipSet
             int id = (int)dgvLista.CurrentRow.Cells["id"].Value;
             string nombre = dgvLista.CurrentRow.Cells["nombre"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el producto {nombre}?",
-                "::: Mensaje - Minerva :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "::: Mensaje - ChipSet :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 ProductoCln.eliminar(id ,Util.usuario.usuario1);
                 listar();
-                MessageBox.Show("Producto dado de baja correctamente", "::: Mensaje - Minerva :::",
+                MessageBox.Show("Producto dado de baja correctamente", "::: Mensaje - ChipSet :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

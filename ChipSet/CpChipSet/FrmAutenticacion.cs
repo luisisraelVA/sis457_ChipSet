@@ -64,5 +64,10 @@ namespace CpChipSet
         {
             if (e.KeyChar == (char)Keys.Enter) btnIngresar.PerformClick();
         }
+
+        private void btnSalir_click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

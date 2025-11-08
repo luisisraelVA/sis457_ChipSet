@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadChipSet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,9 +24,20 @@ namespace CpChipSet
             Util.usuario = null;
             frmAutenticacion.Show();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnCaProductos_Click(object sender, EventArgs e)
         {
             new FrmProductos().ShowDialog();
+        }
+
+        private void btnCaClientes_Click(object sender, EventArgs e)
+        {
+            new FrmCliente().ShowDialog();
+        }
+
+        private void btnCaVentas_Click(object sender, EventArgs e)
+        {
+            new FrmPedidos().ShowDialog();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿CREATE DATABASE LabChipSet;
+GO
 USE master
 GO 
 CREATE LOGIN usrchipset WITH PASSWORD = '123456',
@@ -13,11 +14,11 @@ GO
 ALTER ROLE db_owner ADD MEMBER usrchipset
 GO
 
+DROP TABLE IF EXISTS DetallePedido;
+DROP TABLE IF EXISTS Pedido;
 DROP TABLE IF EXISTS Producto;
 DROP TABLE IF EXISTS Cliente;
 DROP TABLE IF EXISTS Proveedor;
-DROP TABLE IF EXISTS Pedido;
-DROP TABLE IF EXISTS DetallePedido;
 DROP TABLE IF EXISTS Usuario;
 
 CREATE TABLE Proveedor (
@@ -53,7 +54,6 @@ CREATE TABLE DetallePedido (
     idProducto INT NOT NULL,
     cantidad INT NOT NULL CHECK (cantidad > 0),
     precioUnitario DECIMAL NOT NULL  CHECK(precioUnitario>0),
-
     CONSTRAINT fk_DetallePedido_Pedido FOREIGN KEY (idPedido) REFERENCES Pedido(id),
     CONSTRAINT fk_DetallePedido_Producto FOREIGN KEY (idProducto) REFERENCES Producto(id)
 );
@@ -63,6 +63,7 @@ CREATE TABLE Usuario (
     clave VARCHAR(255) NOT NULL,
     );
 
+-- 3. AÑADIR COLUMNAS DE AUDITORÍA
 ALTER TABLE Proveedor ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Proveedor ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Proveedor ADD estado SMALLINT NOT NULL DEFAULT 1;
@@ -85,8 +86,7 @@ ALTER TABLE DetallePedido ADD estado SMALLINT NOT NULL DEFAULT 1;
 
 ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
-ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
-
+ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; 
 
 
 GO
@@ -104,36 +104,80 @@ SELECT  p.id,p.idProveedor,p.nombre,pr.nombre as nombreProveedor,p.descripcion,p
         Proveedor pr ON pr.id = p.idProveedor 
     WHERE 
         p.estado >- 1
-       AND p.nombre+p.descripcion+pr.nombre LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+        AND p.nombre+p.descripcion+pr.nombre LIKE '%'+REPLACE(@parametro,' ','%')+'%'
     ORDER BY 
         p.estado DESC, p.nombre ASC;
 
 EXEC paProductoListar '';
 
 
+GO
+DROP PROC IF EXISTS paClienteListar;
+GO
+CREATE PROC paClienteListar @parametro VARCHAR(100)
+AS
+SELECT
+    c.id,
+    c.nombre,
+    c.email,
+    c.telefono,
+    c.usuarioRegistro,
+    c.fechaRegistro,
+    c.estado
+FROM
+    Cliente c
+WHERE
+    c.estado > -1
+    AND (c.nombre + c.email + ISNULL(c.telefono, '')) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+ORDER BY
+    c.estado DESC, c.nombre ASC;
+EXEC paClienteListar '';
 
--- DML 
+Go
+DROP PROC IF EXISTS paPedidoListar;
+GO
+CREATE PROC paPedidoListar @parametro VARCHAR(100) 
+AS
+SELECT  
+    pe.id,
+    pe.idCliente,
+   c.nombre AS nombreCliente,
+    pe.fechaPedido,
+    pe.total,
+    pe.usuarioRegistro,
+    pe.fechaRegistro, 
+    pe.estado
+FROM 
+    Pedido pe
+-- NOTA: NO hay JOIN a Cliente aquí
+INNER JOIN -- AGREGAR ESTE JOIN
+    Cliente c ON c.id = pe.idCliente
+WHERE 
+    pe.estado > -1 
+    AND (CAST(pe.id AS VARCHAR(10))) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+ORDER BY 
+    pe.estado DESC, pe.fechaPedido DESC;
+GO
+
+EXEC paPedidoListar '';
+
+-- 5. DATOS DML (Los mismos datos de ejemplo que tenías)
 INSERT INTO Proveedor (nombre, telefono) VALUES
 ('TechMayorista S.A.', '555-1000'),
 ('Global Hardware Corp.', '555-2000');
 
--- 2. Insertar Clientes
 INSERT INTO Cliente (nombre, email, telefono) VALUES
 ('Ana Torres', 'ana.t@email.com', '999-1111'),
 ('Carlos Ruiz', 'carlos.r@email.com', '999-2222');
 
--- 3. Insertar Productos
 INSERT INTO Producto (idProveedor, nombre, descripcion, precioVenta, stock) VALUES
 (1, 'Memoria RAM DDR4 16GB', 'Módulo de 16GB, 3200MHz', 45.50, 150),
 (1, 'Disco SSD M.2 500GB', 'Unidad de estado sólido NVMe, 500GB', 35.99, 80),
 (2, 'Tarjeta Gráfica RTX 4060', '8GB GDDR6, ideal para gaming', 349.99, 45),
 (2, 'Procesador Ryzen 5 5600', 'CPU de 6 núcleos y 12 hilos', 125.00, 60);
 
+INSERT INTO Pedido (idCliente, fechaPedido, total) VALUES
+(1, CAST(GETDATE() AS DATE), 150.00);
+
 INSERT INTO Usuario(usuario,clave)
 VALUES ('jperez', 'i0hcoO/nssY6WOs9pOp5Xw=='); -- Clave: hola123
-
-select * from Producto;
-
-EXEC paProductoListar '';
-
-EXEC paProductoListar 'SSD';

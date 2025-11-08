@@ -3,31 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ddl_dml_chipset.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D085DBAA-4109-4D3C-898A-DA4D6C955C22}|CadChipSet\\CadChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cadchipset\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D085DBAA-4109-4D3C-898A-DA4D6C955C22}|CadChipSet\\CadChipSet.csproj|solutionrelative:cadchipset\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\clnchipset\\nombreproveedorcln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|solutionrelative:clnchipset\\nombreproveedorcln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ddl_dml_chipset.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
@@ -45,89 +21,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmAutenticacion.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmAutenticacion.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmAutenticacion.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmAutenticacion.cs",
-              "RelativeToolTip": "CpChipSet\\FrmAutenticacion.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAgwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T00:28:38.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmAutenticacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmAutenticacion.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmAutenticacion.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmAutenticacion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmAutenticacion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T00:28:36.526Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Proveedor.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CadChipSet\\Proveedor.cs",
-              "RelativeDocumentMoniker": "CadChipSet\\Proveedor.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CadChipSet\\Proveedor.cs",
-              "RelativeToolTip": "CadChipSet\\Proveedor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T00:13:09.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "ddl_dml_chipset.sql ",
               "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ddl_dml_chipset.sql",
               "RelativeDocumentMoniker": "..\\ddl_dml_chipset.sql",
               "ToolTip": "ddl_dml_chipset.sql ",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-02T00:08:19.23Z",
+              "WhenOpened": "2025-11-08T13:16:30.923Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NombreProveedorCln.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\ClnChipSet\\NombreProveedorCln.cs",
-              "RelativeDocumentMoniker": "ClnChipSet\\NombreProveedorCln.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\ClnChipSet\\NombreProveedorCln.cs",
-              "RelativeToolTip": "ClnChipSet\\NombreProveedorCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T00:05:45.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmProductos.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmProductos.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmProductos.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmProductos.cs",
-              "RelativeToolTip": "CpChipSet\\FrmProductos.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGsAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T00:03:14.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmProductos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmProductos.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmProductos.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmProductos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmProductos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T00:03:13.18Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
