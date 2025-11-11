@@ -40,6 +40,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.cbxProveedor = new System.Windows.Forms.ComboBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.nudStock = new System.Windows.Forms.NumericUpDown();
@@ -55,8 +57,6 @@
             this.erpPrecioVenta = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpStock = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblProveedor = new System.Windows.Forms.Label();
-            this.cbxProveedor = new System.Windows.Forms.ComboBox();
             this.erpProveedor = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbxListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -88,7 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 26);
+            this.label2.Size = new System.Drawing.Size(220, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Buscar por nombre, descripcion";
             // 
@@ -96,7 +96,7 @@
             // 
             this.txtParametro.Location = new System.Drawing.Point(337, 83);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(632, 32);
+            this.txtParametro.Size = new System.Drawing.Size(632, 24);
             this.txtParametro.TabIndex = 2;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
@@ -210,6 +210,23 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
             // 
+            // cbxProveedor
+            // 
+            this.cbxProveedor.FormattingEnabled = true;
+            this.cbxProveedor.Location = new System.Drawing.Point(835, 25);
+            this.cbxProveedor.Name = "cbxProveedor";
+            this.cbxProveedor.Size = new System.Drawing.Size(199, 26);
+            this.cbxProveedor.TabIndex = 10;
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Location = new System.Drawing.Point(710, 28);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(81, 18);
+            this.lblProveedor.TabIndex = 9;
+            this.lblProveedor.Text = "Proveedor:";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::CpChipSet.Properties.Resources.cancel;
@@ -239,8 +256,13 @@
             // nudStock
             // 
             this.nudStock.Location = new System.Drawing.Point(568, 70);
+            this.nudStock.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.nudStock.Name = "nudStock";
-            this.nudStock.Size = new System.Drawing.Size(120, 32);
+            this.nudStock.Size = new System.Drawing.Size(120, 24);
             this.nudStock.TabIndex = 7;
             // 
             // nudPrecioVenta
@@ -252,21 +274,21 @@
             0,
             0});
             this.nudPrecioVenta.Name = "nudPrecioVenta";
-            this.nudPrecioVenta.Size = new System.Drawing.Size(120, 32);
+            this.nudPrecioVenta.Size = new System.Drawing.Size(120, 24);
             this.nudPrecioVenta.TabIndex = 6;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(149, 66);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(194, 32);
+            this.txtDescripcion.Size = new System.Drawing.Size(194, 24);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(149, 31);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(194, 32);
+            this.txtNombre.Size = new System.Drawing.Size(194, 24);
             this.txtNombre.TabIndex = 4;
             // 
             // lblStock
@@ -274,7 +296,7 @@
             this.lblStock.AutoSize = true;
             this.lblStock.Location = new System.Drawing.Point(376, 70);
             this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(73, 26);
+            this.lblStock.Size = new System.Drawing.Size(51, 18);
             this.lblStock.TabIndex = 3;
             this.lblStock.Text = "Stock:";
             // 
@@ -283,7 +305,7 @@
             this.lblPrecioVenta.AutoSize = true;
             this.lblPrecioVenta.Location = new System.Drawing.Point(376, 32);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(185, 26);
+            this.lblPrecioVenta.Size = new System.Drawing.Size(124, 18);
             this.lblPrecioVenta.TabIndex = 2;
             this.lblPrecioVenta.Text = "Precion de Venta:";
             // 
@@ -292,7 +314,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(7, 70);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(132, 26);
+            this.lblDescripcion.Size = new System.Drawing.Size(91, 18);
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Descripción:";
             // 
@@ -301,7 +323,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(7, 32);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(96, 26);
+            this.lblNombre.Size = new System.Drawing.Size(66, 18);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -334,33 +356,16 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // lblProveedor
-            // 
-            this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Location = new System.Drawing.Point(710, 28);
-            this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(118, 26);
-            this.lblProveedor.TabIndex = 9;
-            this.lblProveedor.Text = "Proveedor:";
-            // 
-            // cbxProveedor
-            // 
-            this.cbxProveedor.FormattingEnabled = true;
-            this.cbxProveedor.Location = new System.Drawing.Point(835, 25);
-            this.cbxProveedor.Name = "cbxProveedor";
-            this.cbxProveedor.Size = new System.Drawing.Size(199, 34);
-            this.cbxProveedor.TabIndex = 10;
-            // 
             // erpProveedor
             // 
             this.erpProveedor.ContainerControl = this;
             // 
             // FrmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1143, 913);
+            this.ClientSize = new System.Drawing.Size(1143, 749);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.gbxListado);
