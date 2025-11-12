@@ -43,6 +43,15 @@ namespace CadChipSet
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paClienteListar_Result>("paClienteListar", parametroParameter);
         }
     
+        public virtual ObjectResult<paDetallePedidoListar_Result> paDetallePedidoListar(Nullable<int> idPedido)
+        {
+            var idPedidoParameter = idPedido.HasValue ?
+                new ObjectParameter("idPedido", idPedido) :
+                new ObjectParameter("idPedido", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paDetallePedidoListar_Result>("paDetallePedidoListar", idPedidoParameter);
+        }
+    
         public virtual ObjectResult<paPedidoListar_Result> paPedidoListar(string parametro)
         {
             var parametroParameter = parametro != null ?

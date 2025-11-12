@@ -28,4 +28,4 @@ C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\bin\Debug\C1.Win.C1Ribbon.4.
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe.licenses
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmCliente.resources
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmPedidos.resources
-C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe.config
+C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.exe.config

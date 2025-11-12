@@ -11,7 +11,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
           <Property Name="telefono" Type="varchar" MaxLength="20" />
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
@@ -79,7 +79,9 @@
           <Property Name="estado" Type="smallint" Nullable="false" />
         </EntityType>
         <Association Name="fk_DetallePedido_Pedido">
-          <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+          <End Role="Pedido" Type="Self.Pedido" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pedido">
@@ -129,6 +131,9 @@
         <Function Name="paClienteListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="paDetallePedidoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idPedido" Type="int" Mode="In" />
+        </Function>
         <Function Name="paPedidoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
@@ -170,7 +175,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
@@ -258,7 +263,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_DetallePedido_Pedido">
-          <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+          <End Role="Pedido" Type="Self.Pedido" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pedido">
@@ -319,6 +326,9 @@
           <FunctionImport Name="paClienteListar" ReturnType="Collection(LabChipSetModel.paClienteListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="paDetallePedidoListar" ReturnType="Collection(LabChipSetModel.paDetallePedidoListar_Result)">
+            <Parameter Name="idPedido" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="paPedidoListar" ReturnType="Collection(LabChipSetModel.paPedidoListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
@@ -329,11 +339,19 @@
         <ComplexType Name="paClienteListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="email" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="email" Nullable="true" MaxLength="100" />
           <Property Type="String" Name="telefono" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="paDetallePedidoListar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="idPedido" Nullable="false" />
+          <Property Type="Int32" Name="idProducto" Nullable="false" />
+          <Property Type="String" Name="nombreProducto" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="cantidad" Nullable="false" />
+          <Property Type="Decimal" Name="precioUnitario" Nullable="false" Precision="18" Scale="0" />
         </ComplexType>
         <ComplexType Name="paPedidoListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -452,6 +470,18 @@
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paDetallePedidoListar" FunctionName="LabChipSetModel.Store.paDetallePedidoListar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabChipSetModel.paDetallePedidoListar_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+                <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+                <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="precioUnitario" ColumnName="precioUnitario" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

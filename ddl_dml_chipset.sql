@@ -63,7 +63,25 @@ CREATE TABLE Usuario (
     clave VARCHAR(255) NOT NULL,
     );
 
--- 3. AÑADIR COLUMNAS DE AUDITORÍA
+
+    ALTER TABLE DetallePedido 
+DROP CONSTRAINT fk_DetallePedido_Pedido;
+GO
+
+ALTER TABLE Cliente
+ALTER COLUMN email VARCHAR(100) NULL;
+GO
+
+ALTER TABLE DetallePedido
+ADD CONSTRAINT fk_DetallePedido_Pedido 
+    FOREIGN KEY (idPedido) 
+    REFERENCES Pedido(id) 
+    ON DELETE CASCADE; 
+GO
+
+
+
+
 ALTER TABLE Proveedor ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Proveedor ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Proveedor ADD estado SMALLINT NOT NULL DEFAULT 1;
@@ -111,7 +129,6 @@ SELECT  p.id,p.idProveedor,p.nombre,pr.nombre as nombreProveedor,p.descripcion,p
 EXEC paProductoListar '';
 
 
-GO
 DROP PROC IF EXISTS paClienteListar;
 GO
 CREATE PROC paClienteListar @parametro VARCHAR(100)
@@ -128,10 +145,11 @@ FROM
     Cliente c
 WHERE
     c.estado > -1
-    AND (c.nombre + c.email + ISNULL(c.telefono, '')) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+    -- Aquí está la corrección: ISNULL(c.email, '')
+    AND (c.nombre + ISNULL(c.email, '') + ISNULL(c.telefono, '')) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
 ORDER BY
     c.estado DESC, c.nombre ASC;
-EXEC paClienteListar '';
+GO
 
 Go
 DROP PROC IF EXISTS paPedidoListar;
@@ -149,8 +167,7 @@ SELECT
     pe.estado
 FROM 
     Pedido pe
--- NOTA: NO hay JOIN a Cliente aquí
-INNER JOIN -- AGREGAR ESTE JOIN
+INNER JOIN 
     Cliente c ON c.id = pe.idCliente
 WHERE 
     pe.estado > -1 
@@ -161,7 +178,28 @@ GO
 
 EXEC paPedidoListar '';
 
--- 5. DATOS DML (Los mismos datos de ejemplo que tenías)
+
+GO
+DROP PROC IF EXISTS paDetallePedidoListar;
+GO
+CREATE PROC paDetallePedidoListar @idPedido INT
+AS
+SELECT 
+    d.id,
+    d.idPedido,
+    d.idProducto,
+    p.nombre AS nombreProducto, -- Útil para mostrar en el dgvCarrito
+    d.cantidad,
+    d.precioUnitario
+FROM 
+    DetallePedido d
+INNER JOIN 
+    Producto p ON d.idProducto = p.id
+WHERE 
+    d.estado = 1 AND d.idPedido = @idPedido;
+
+
+
 INSERT INTO Proveedor (nombre, telefono) VALUES
 ('TechMayorista S.A.', '555-1000'),
 ('Global Hardware Corp.', '555-2000');

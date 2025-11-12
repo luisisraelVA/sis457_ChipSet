@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedidos));
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblFechaPedido = new System.Windows.Forms.Label();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.btnAnadir = new System.Windows.Forms.Button();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,9 +47,9 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.pnlAcciones = new System.Windows.Forms.Panel();
+            this.btnDetalle = new System.Windows.Forms.Button();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.gbxListado = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -56,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.erpTotal = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCliente = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgvCarrito = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotal)).BeginInit();
             this.gbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
@@ -64,6 +67,7 @@
             this.gbxListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCliente
@@ -87,7 +91,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Image = global::CpChipSet.Properties.Resources.cancel;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(655, 152);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -109,6 +113,7 @@
             0,
             0});
             this.nudTotal.Name = "nudTotal";
+            this.nudTotal.ReadOnly = true;
             this.nudTotal.Size = new System.Drawing.Size(160, 30);
             this.nudTotal.TabIndex = 6;
             // 
@@ -134,6 +139,7 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.btnAnadir);
             this.gbxDatos.Controls.Add(this.btnAgregarProducto);
             this.gbxDatos.Controls.Add(this.nudCantidad);
             this.gbxDatos.Controls.Add(this.label4);
@@ -147,14 +153,28 @@
             this.gbxDatos.Controls.Add(this.nudTotal);
             this.gbxDatos.Controls.Add(this.lblTotal);
             this.gbxDatos.Controls.Add(this.lblFechaPedido);
-            this.gbxDatos.Location = new System.Drawing.Point(30, 663);
+            this.gbxDatos.Location = new System.Drawing.Point(152, 670);
             this.gbxDatos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbxDatos.Name = "gbxDatos";
             this.gbxDatos.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.gbxDatos.Size = new System.Drawing.Size(986, 218);
+            this.gbxDatos.Size = new System.Drawing.Size(1101, 218);
             this.gbxDatos.TabIndex = 13;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
+            // 
+            // btnAnadir
+            // 
+            this.btnAnadir.Image = ((System.Drawing.Image)(resources.GetObject("btnAnadir.Image")));
+            this.btnAnadir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnadir.Location = new System.Drawing.Point(899, 25);
+            this.btnAnadir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAnadir.Name = "btnAnadir";
+            this.btnAnadir.Size = new System.Drawing.Size(116, 49);
+            this.btnAnadir.TabIndex = 8;
+            this.btnAnadir.Text = "Añadir";
+            this.btnAnadir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAnadir.UseVisualStyleBackColor = true;
+            this.btnAnadir.Click += new System.EventHandler(this.btnAnadir_Click);
             // 
             // btnAgregarProducto
             // 
@@ -214,7 +234,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Image = global::CpChipSet.Properties.Resources.save;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(517, 152);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -228,9 +248,9 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Image = global::CpChipSet.Properties.Resources.close;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(625, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(601, 12);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(110, 73);
@@ -242,9 +262,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Image = global::CpChipSet.Properties.Resources.delete;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(484, 12);
+            this.btnEliminar.Location = new System.Drawing.Point(351, 12);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(118, 73);
@@ -254,23 +274,9 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = global::CpChipSet.Properties.Resources.edit;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(361, 12);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(110, 73);
-            this.btnEditar.TabIndex = 5;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::CpChipSet.Properties.Resources._new;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(233, 12);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -284,15 +290,29 @@
             // 
             // pnlAcciones
             // 
+            this.pnlAcciones.Controls.Add(this.btnDetalle);
             this.pnlAcciones.Controls.Add(this.btnCerrar);
             this.pnlAcciones.Controls.Add(this.btnEliminar);
-            this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
-            this.pnlAcciones.Location = new System.Drawing.Point(29, 540);
+            this.pnlAcciones.Location = new System.Drawing.Point(152, 525);
             this.pnlAcciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pnlAcciones.Name = "pnlAcciones";
             this.pnlAcciones.Size = new System.Drawing.Size(986, 98);
             this.pnlAcciones.TabIndex = 12;
+            // 
+            // btnDetalle
+            // 
+            this.btnDetalle.Image = ((System.Drawing.Image)(resources.GetObject("btnDetalle.Image")));
+            this.btnDetalle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetalle.Location = new System.Drawing.Point(477, 12);
+            this.btnDetalle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(116, 73);
+            this.btnDetalle.TabIndex = 16;
+            this.btnDetalle.Text = "Detalle";
+            this.btnDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // dgvLista
             // 
@@ -308,24 +328,25 @@
             this.dgvLista.RowHeadersWidth = 62;
             this.dgvLista.RowTemplate.Height = 28;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(929, 314);
+            this.dgvLista.Size = new System.Drawing.Size(1154, 117);
             this.dgvLista.TabIndex = 0;
             // 
             // gbxListado
             // 
+            this.gbxListado.Controls.Add(this.dgvCarrito);
             this.gbxListado.Controls.Add(this.dgvLista);
             this.gbxListado.Location = new System.Drawing.Point(29, 115);
             this.gbxListado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbxListado.Name = "gbxListado";
             this.gbxListado.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.gbxListado.Size = new System.Drawing.Size(986, 410);
+            this.gbxListado.Size = new System.Drawing.Size(1210, 383);
             this.gbxListado.TabIndex = 11;
             this.gbxListado.TabStop = false;
             this.gbxListado.Text = "Lista de Pedidos";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::CpChipSet.Properties.Resources.search;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(560, 60);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -335,7 +356,6 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtParametro
             // 
@@ -363,7 +383,7 @@
             this.label1.Location = new System.Drawing.Point(37, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1006, 50);
+            this.label1.Size = new System.Drawing.Size(1271, 50);
             this.label1.TabIndex = 7;
             this.label1.Text = "Pedidos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -376,11 +396,28 @@
             // 
             this.erpCliente.ContainerControl = this;
             // 
+            // dgvCarrito
+            // 
+            this.dgvCarrito.AllowUserToAddRows = false;
+            this.dgvCarrito.AllowUserToDeleteRows = false;
+            this.dgvCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrito.Location = new System.Drawing.Point(26, 205);
+            this.dgvCarrito.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvCarrito.MultiSelect = false;
+            this.dgvCarrito.Name = "dgvCarrito";
+            this.dgvCarrito.ReadOnly = true;
+            this.dgvCarrito.RowHeadersWidth = 62;
+            this.dgvCarrito.RowTemplate.Height = 28;
+            this.dgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCarrito.Size = new System.Drawing.Size(1154, 132);
+            this.dgvCarrito.TabIndex = 0;
+            // 
             // FrmPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 952);
+            this.ClientSize = new System.Drawing.Size(1334, 923);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.gbxListado);
@@ -405,6 +442,7 @@
             this.gbxListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erpTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,7 +460,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Panel pnlAcciones;
         private System.Windows.Forms.DataGridView dgvLista;
@@ -439,5 +476,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxProducto;
         private System.Windows.Forms.Button btnAgregarProducto;
+        private System.Windows.Forms.Button btnAnadir;
+        private System.Windows.Forms.DataGridView dgvCarrito;
+        private System.Windows.Forms.Button btnDetalle;
     }
 }

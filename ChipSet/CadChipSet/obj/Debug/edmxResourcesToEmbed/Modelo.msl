@@ -93,6 +93,18 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paDetallePedidoListar" FunctionName="LabChipSetModel.Store.paDetallePedidoListar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LabChipSetModel.paDetallePedidoListar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precioUnitario" ColumnName="precioUnitario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="paPedidoListar" FunctionName="LabChipSetModel.Store.paPedidoListar">
       <ResultMapping>
         <ComplexTypeMapping TypeName="LabChipSetModel.paPedidoListar_Result">

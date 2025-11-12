@@ -68,5 +68,19 @@ namespace ClnChipSet
                 return context.paPedidoListar(parametro).ToList();
             }
         }
+
+        public static bool insertarConDetalle(Pedido pedido, List<DetallePedido> detalles)
+        {
+            pedido.total = detalles.Sum(d => d.cantidad * d.precioUnitario);
+            return PedidoCad.GuardarVenta(pedido, detalles);
+        }
+
+        public static List<paDetallePedidoListar_Result> listarDetallesSP(int idPedido)
+        {
+            using (var context = new LabChipSetEntities())
+            {
+                return context.paDetallePedidoListar(idPedido).ToList();
+            }
+        }
     }
 }

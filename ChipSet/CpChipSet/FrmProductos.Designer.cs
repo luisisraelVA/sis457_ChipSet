@@ -40,6 +40,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.cbxProveedor = new System.Windows.Forms.ComboBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.nudStock = new System.Windows.Forms.NumericUpDown();
@@ -55,8 +57,6 @@
             this.erpPrecioVenta = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpStock = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblProveedor = new System.Windows.Forms.Label();
-            this.cbxProveedor = new System.Windows.Forms.ComboBox();
             this.erpProveedor = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbxListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -210,6 +210,23 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
             // 
+            // cbxProveedor
+            // 
+            this.cbxProveedor.FormattingEnabled = true;
+            this.cbxProveedor.Location = new System.Drawing.Point(835, 25);
+            this.cbxProveedor.Name = "cbxProveedor";
+            this.cbxProveedor.Size = new System.Drawing.Size(199, 34);
+            this.cbxProveedor.TabIndex = 10;
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Location = new System.Drawing.Point(710, 28);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(118, 26);
+            this.lblProveedor.TabIndex = 9;
+            this.lblProveedor.Text = "Proveedor:";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::CpChipSet.Properties.Resources.cancel;
@@ -333,23 +350,6 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // lblProveedor
-            // 
-            this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Location = new System.Drawing.Point(710, 28);
-            this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(118, 26);
-            this.lblProveedor.TabIndex = 9;
-            this.lblProveedor.Text = "Proveedor:";
-            // 
-            // cbxProveedor
-            // 
-            this.cbxProveedor.FormattingEnabled = true;
-            this.cbxProveedor.Location = new System.Drawing.Point(835, 25);
-            this.cbxProveedor.Name = "cbxProveedor";
-            this.cbxProveedor.Size = new System.Drawing.Size(199, 34);
-            this.cbxProveedor.TabIndex = 10;
             // 
             // erpProveedor
             // 

@@ -26,7 +26,7 @@ namespace CpChipSet
             dgvLista.DataSource = lista;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["nombre"].HeaderText = "Nombre";
-            dgvLista.Columns["email"].HeaderText = "Email";
+            dgvLista.Columns["email"].Visible = false;
             dgvLista.Columns["telefono"].HeaderText = "Telefono";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
