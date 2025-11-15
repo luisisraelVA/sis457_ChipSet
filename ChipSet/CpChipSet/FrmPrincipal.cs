@@ -37,7 +37,14 @@ namespace CpChipSet
 
         private void btnCaVentas_Click(object sender, EventArgs e)
         {
-            new FrmPedidos().ShowDialog();
+            FrmVenta frm = new FrmVenta();
+            frm.ShowDialog(); // O frm.Show()
+        }
+
+        private void btnCaDetallesVenta_Click(object sender, EventArgs e)
+        {
+            FrmHistorialVentas frm = new FrmHistorialVentas();
+            frm.ShowDialog(); //
         }
     }
 }

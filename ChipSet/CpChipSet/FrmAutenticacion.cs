@@ -16,7 +16,7 @@ namespace CpChipSet
         public FrmAutenticacion()
         {
             InitializeComponent();
-           // txtUsuario.Text = Util.Encrypt("hola123");
+            // txtUsuario.Text = Util.Encrypt("hola123");
         }
 
         private bool validar()
@@ -47,25 +47,24 @@ namespace CpChipSet
                 {
                     Util.usuario = usuario;
                     txtClave.Clear();
-                    txtUsuario.Focus();
-                    txtUsuario.SelectAll();
                     Hide();
+
                     new FrmPrincipal(this).ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Mensaje - Minerva :::",
+                    MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Mensaje - ChipSet :::",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                    txtUsuario.Focus();
+                    txtUsuario.SelectAll();
                 }
             }
         }
 
-        private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter) btnIngresar.PerformClick();
-        }
 
-        private void btnSalir_click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

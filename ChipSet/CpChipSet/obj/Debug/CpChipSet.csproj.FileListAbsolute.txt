@@ -63,3 +63,4 @@ C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.csp
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.pdb
 >>>>>>> 22ed1c297cbb1ab81124f41e9a3b397ff265a9b6
+C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.FrmDetalles.resources

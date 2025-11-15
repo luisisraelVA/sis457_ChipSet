@@ -121,6 +121,7 @@
             this.btnCaDetallesVenta.Name = "btnCaDetallesVenta";
             this.btnCaDetallesVenta.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCaDetallesVenta.SmallImage")));
             this.btnCaDetallesVenta.Text = "Detalles de Venta";
+            this.btnCaDetallesVenta.Click += new System.EventHandler(this.btnCaDetallesVenta_Click);
             // 
             // ribbonTopToolBar1
             // 
