@@ -215,11 +215,9 @@
             this.cbxProveedor.FormattingEnabled = true;
             this.cbxProveedor.Location = new System.Drawing.Point(835, 25);
             this.cbxProveedor.Name = "cbxProveedor";
-<<<<<<< HEAD
+
             this.cbxProveedor.Size = new System.Drawing.Size(199, 34);
-=======
-            this.cbxProveedor.Size = new System.Drawing.Size(199, 26);
->>>>>>> 22ed1c297cbb1ab81124f41e9a3b397ff265a9b6
+
             this.cbxProveedor.TabIndex = 10;
             // 
             // lblProveedor
@@ -227,11 +225,9 @@
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Location = new System.Drawing.Point(710, 28);
             this.lblProveedor.Name = "lblProveedor";
-<<<<<<< HEAD
+
             this.lblProveedor.Size = new System.Drawing.Size(118, 26);
-=======
-            this.lblProveedor.Size = new System.Drawing.Size(81, 18);
->>>>>>> 22ed1c297cbb1ab81124f41e9a3b397ff265a9b6
+
             this.lblProveedor.TabIndex = 9;
             this.lblProveedor.Text = "Proveedor:";
             // 

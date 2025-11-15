@@ -31,7 +31,6 @@ C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmPedid
 <<<<<<< HEAD
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.exe.config
 =======
-C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe.config
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CpChipSet.exe.config
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CpChipSet.exe
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CpChipSet.pdb
