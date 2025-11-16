@@ -215,9 +215,7 @@
             this.cbxProveedor.FormattingEnabled = true;
             this.cbxProveedor.Location = new System.Drawing.Point(835, 25);
             this.cbxProveedor.Name = "cbxProveedor";
-
-            this.cbxProveedor.Size = new System.Drawing.Size(199, 34);
-
+            this.cbxProveedor.Size = new System.Drawing.Size(199, 26);
             this.cbxProveedor.TabIndex = 10;
             // 
             // lblProveedor
@@ -225,9 +223,7 @@
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Location = new System.Drawing.Point(710, 28);
             this.lblProveedor.Name = "lblProveedor";
-
-            this.lblProveedor.Size = new System.Drawing.Size(118, 26);
-
+            this.lblProveedor.Size = new System.Drawing.Size(81, 18);
             this.lblProveedor.TabIndex = 9;
             this.lblProveedor.Text = "Proveedor:";
             // 
@@ -273,7 +269,7 @@
             // 
             this.nudPrecioVenta.Location = new System.Drawing.Point(568, 31);
             this.nudPrecioVenta.Maximum = new decimal(new int[] {
-            9999,
+            99999,
             0,
             0,
             0});
@@ -309,9 +305,9 @@
             this.lblPrecioVenta.AutoSize = true;
             this.lblPrecioVenta.Location = new System.Drawing.Point(376, 32);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(124, 18);
+            this.lblPrecioVenta.Size = new System.Drawing.Size(116, 18);
             this.lblPrecioVenta.TabIndex = 2;
-            this.lblPrecioVenta.Text = "Precion de Venta:";
+            this.lblPrecioVenta.Text = "Precio de Venta:";
             // 
             // lblDescripcion
             // 

@@ -22,3 +22,15 @@ C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.c
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.csproj.Up2Date
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.dll
 C:\Users\veymar\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.pdb
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\bin\Debug\CadChipSet.dll.config
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\bin\Debug\CadChipSet.dll
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\bin\Debug\CadChipSet.pdb
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\bin\Debug\EntityFramework.dll
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\bin\Debug\EntityFramework.xml
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.csproj.AssemblyReference.cache
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.csproj.CoreCompileInputs.cache
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.csproj.Up2Date
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.dll
+C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CadChipSet\obj\Debug\CadChipSet.pdb
