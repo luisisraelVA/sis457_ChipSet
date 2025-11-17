@@ -36,7 +36,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 20);
+            this.label1.Size = new System.Drawing.Size(150, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar por Nombre:";
             // 
@@ -130,7 +130,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 9);
@@ -154,6 +154,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtParametro);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBuscarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Producto";

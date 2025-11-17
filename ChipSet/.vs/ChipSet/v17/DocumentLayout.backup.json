@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D085DBAA-4109-4D3C-898A-DA4D6C955C22}|CadChipSet\\CadChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cadchipset\\modelo.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{D085DBAA-4109-4D3C-898A-DA4D6C955C22}|CadChipSet\\CadChipSet.csproj|solutionrelative:cadchipset\\modelo.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmVenta.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmVenta.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmVenta.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmVenta.cs",
-              "RelativeToolTip": "CpChipSet\\FrmVenta.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAApwPAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T03:02:48.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmVenta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmVenta.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmVenta.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmVenta.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmVenta.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T02:57:47.494Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Title": "Modelo.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CadChipSet\\Modelo.edmx",
+              "RelativeDocumentMoniker": "CadChipSet\\Modelo.edmx",
+              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CadChipSet\\Modelo.edmx [Diagram1]",
+              "RelativeToolTip": "CadChipSet\\Modelo.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-11-17T03:37:47.229Z",
+              "EditorCaption": " [Diagram1]"
             }
           ]
         }

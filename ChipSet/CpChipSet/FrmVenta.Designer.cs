@@ -18,6 +18,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVenta));
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
@@ -346,6 +347,7 @@
             this.ClientSize = new System.Drawing.Size(1279, 653);
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(919, 647);
             this.Name = "FrmVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

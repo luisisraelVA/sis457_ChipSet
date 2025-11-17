@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9fdd011918b9472999ecf11b88983ab9" Name="Diagram1">
+      <Diagram DiagramId="9fdd011918b9472999ecf11b88983ab9" Name="Diagram1" ZoomLevel="112">
         <EntityTypeShape EntityType="LabChipSetModel.Cliente" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="LabChipSetModel.DetallePedido" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LabChipSetModel.Pedido" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />

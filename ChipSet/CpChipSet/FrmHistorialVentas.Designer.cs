@@ -17,8 +17,9 @@
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHistorialVentas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
             this.gbxListado = new System.Windows.Forms.GroupBox();
@@ -69,8 +70,8 @@
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgvDetalles.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvDetalles.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetalles.RowTemplate.Height = 28;
             this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalles.Size = new System.Drawing.Size(1202, 189);
@@ -105,8 +106,8 @@
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
             this.dgvPedidos.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPedidos.RowTemplate.Height = 28;
             this.dgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPedidos.Size = new System.Drawing.Size(1202, 189);
@@ -244,6 +245,7 @@
             this.ClientSize = new System.Drawing.Size(1234, 692);
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmHistorialVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
