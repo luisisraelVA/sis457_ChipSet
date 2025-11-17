@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.gbxListado = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtParametro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.erpNombre = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpTelefono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.gbxListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.pnlAcciones.SuspendLayout();
@@ -63,7 +63,10 @@
             // 
             // gbxListado
             // 
+            this.gbxListado.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.gbxListado.Controls.Add(this.dgvLista);
+            this.gbxListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxListado.ForeColor = System.Drawing.Color.Black;
             this.gbxListado.Location = new System.Drawing.Point(24, 146);
             this.gbxListado.Name = "gbxListado";
             this.gbxListado.Size = new System.Drawing.Size(1107, 333);
@@ -87,33 +90,21 @@
             this.dgvLista.Size = new System.Drawing.Size(1070, 259);
             this.dgvLista.TabIndex = 0;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::CpChipSet.Properties.Resources.search;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(923, 82);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(122, 58);
-            this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
             // txtParametro
             // 
             this.txtParametro.Location = new System.Drawing.Point(266, 95);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(632, 32);
+            this.txtParametro.Size = new System.Drawing.Size(632, 24);
             this.txtParametro.TabIndex = 8;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 26);
+            this.label2.Size = new System.Drawing.Size(194, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar por nombre";
             // 
@@ -121,7 +112,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(46, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1052, 40);
@@ -131,6 +124,7 @@
             // 
             // pnlAcciones
             // 
+            this.pnlAcciones.BackColor = System.Drawing.Color.Transparent;
             this.pnlAcciones.Controls.Add(this.btnCerrar);
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
@@ -194,6 +188,7 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.BackColor = System.Drawing.Color.Transparent;
             this.gbxDatos.Controls.Add(this.txtTelefono);
             this.gbxDatos.Controls.Add(this.label3);
             this.gbxDatos.Controls.Add(this.btnCancelar);
@@ -202,6 +197,8 @@
             this.gbxDatos.Controls.Add(this.txtNombre);
             this.gbxDatos.Controls.Add(this.lblDescripcion);
             this.gbxDatos.Controls.Add(this.lblNombre);
+            this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxDatos.ForeColor = System.Drawing.Color.White;
             this.gbxDatos.Location = new System.Drawing.Point(24, 631);
             this.gbxDatos.Name = "gbxDatos";
             this.gbxDatos.Size = new System.Drawing.Size(1107, 239);
@@ -213,7 +210,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(539, 31);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(194, 32);
+            this.txtTelefono.Size = new System.Drawing.Size(194, 29);
             this.txtTelefono.TabIndex = 10;
             // 
             // label3
@@ -221,12 +218,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(397, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 26);
+            this.label3.Size = new System.Drawing.Size(90, 24);
             this.label3.TabIndex = 9;
             this.label3.Text = "Telefono:";
             // 
             // btnCancelar
             // 
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = global::CpChipSet.Properties.Resources.cancel;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(500, 132);
@@ -240,6 +238,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = global::CpChipSet.Properties.Resources.save;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(342, 132);
@@ -255,14 +254,14 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(149, 66);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(194, 32);
+            this.txtEmail.Size = new System.Drawing.Size(194, 29);
             this.txtEmail.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(149, 31);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(194, 32);
+            this.txtNombre.Size = new System.Drawing.Size(194, 29);
             this.txtNombre.TabIndex = 4;
             // 
             // lblDescripcion
@@ -270,7 +269,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(7, 70);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(74, 26);
+            this.lblDescripcion.Size = new System.Drawing.Size(62, 24);
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Email:";
             // 
@@ -279,7 +278,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(7, 32);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(96, 26);
+            this.lblNombre.Size = new System.Drawing.Size(84, 24);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -295,11 +294,26 @@
             // 
             this.erpTelefono.ContainerControl = this;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::CpChipSet.Properties.Resources.search;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(923, 82);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(122, 58);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
             // FrmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackgroundImage = global::CpChipSet.Properties.Resources.fondokpc;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1143, 913);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.gbxListado);

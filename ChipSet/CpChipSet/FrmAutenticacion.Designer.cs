@@ -49,6 +49,7 @@
             // 
             // tlpMain
             // 
+            this.tlpMain.BackColor = System.Drawing.Color.Transparent;
             this.tlpMain.ColumnCount = 2;
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -118,7 +119,7 @@
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(3, 37);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(130, 40);
+            this.lblUsuario.Size = new System.Drawing.Size(89, 40);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario:";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,10 +128,10 @@
             // 
             this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(139, 41);
+            this.txtUsuario.Location = new System.Drawing.Point(98, 45);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(338, 32);
+            this.txtUsuario.Size = new System.Drawing.Size(379, 24);
             this.txtUsuario.TabIndex = 1;
             // 
             // lblClave
@@ -140,7 +141,7 @@
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.Location = new System.Drawing.Point(3, 77);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(130, 40);
+            this.lblClave.Size = new System.Drawing.Size(89, 40);
             this.lblClave.TabIndex = 2;
             this.lblClave.Text = "Contraseña:";
             this.lblClave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,11 +150,11 @@
             // 
             this.txtClave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(139, 81);
+            this.txtClave.Location = new System.Drawing.Point(98, 85);
             this.txtClave.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(338, 32);
+            this.txtClave.Size = new System.Drawing.Size(379, 24);
             this.txtClave.TabIndex = 3;
             // 
             // flpBotones
@@ -184,7 +185,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Image = global::CpChipSet.Properties.Resources.login_ok;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIngresar.Location = new System.Drawing.Point(200, 3);
@@ -199,8 +200,11 @@
             // FrmAutenticacion
             // 
             this.AcceptButton = this.btnIngresar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BackgroundImage = global::CpChipSet.Properties.Resources.abstract_square_interface_modern_background_concept_fingerprint_digital_scanning_visual_security_system_authentication_login_vector;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(723, 301);
             this.Controls.Add(this.tlpMain);

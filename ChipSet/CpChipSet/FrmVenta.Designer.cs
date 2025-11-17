@@ -65,24 +65,25 @@
             this.tlpMain.Controls.Add(this.tlpFooter, 0, 3);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
-            this.tlpMain.Margin = new System.Windows.Forms.Padding(10);
+            this.tlpMain.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tlpMain.Name = "tlpMain";
-            this.tlpMain.Padding = new System.Windows.Forms.Padding(10);
+            this.tlpMain.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tlpMain.RowCount = 4;
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlpMain.Size = new System.Drawing.Size(900, 600);
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlpMain.Size = new System.Drawing.Size(604, 401);
             this.tlpMain.TabIndex = 0;
             // 
             // lblTitulo
             // 
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(13, 10);
+            this.lblTitulo.Location = new System.Drawing.Point(9, 6);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(874, 60);
+            this.lblTitulo.Size = new System.Drawing.Size(586, 39);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Registrar Nueva Venta";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,9 +93,11 @@
             this.gbxDatos.Controls.Add(this.tlpDatos);
             this.gbxDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDatos.Location = new System.Drawing.Point(13, 73);
+            this.gbxDatos.Location = new System.Drawing.Point(9, 47);
+            this.gbxDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(874, 94);
+            this.gbxDatos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxDatos.Size = new System.Drawing.Size(586, 61);
             this.gbxDatos.TabIndex = 1;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos del Pedido";
@@ -109,21 +112,23 @@
             this.tlpDatos.Controls.Add(this.lblCliente, 0, 1);
             this.tlpDatos.Controls.Add(this.cbxCliente, 1, 1);
             this.tlpDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDatos.Location = new System.Drawing.Point(3, 24);
+            this.tlpDatos.Location = new System.Drawing.Point(2, 16);
+            this.tlpDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tlpDatos.Name = "tlpDatos";
             this.tlpDatos.RowCount = 2;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDatos.Size = new System.Drawing.Size(868, 67);
+            this.tlpDatos.Size = new System.Drawing.Size(582, 43);
             this.tlpDatos.TabIndex = 0;
             // 
             // lblFechaPedido
             // 
             this.lblFechaPedido.AutoSize = true;
             this.lblFechaPedido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFechaPedido.Location = new System.Drawing.Point(3, 0);
+            this.lblFechaPedido.Location = new System.Drawing.Point(2, 0);
+            this.lblFechaPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaPedido.Name = "lblFechaPedido";
-            this.lblFechaPedido.Size = new System.Drawing.Size(147, 33);
+            this.lblFechaPedido.Size = new System.Drawing.Size(103, 21);
             this.lblFechaPedido.TabIndex = 0;
             this.lblFechaPedido.Text = "Fecha de Pedido:";
             this.lblFechaPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,18 +136,20 @@
             // dtpFechaPedido
             // 
             this.dtpFechaPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFechaPedido.Location = new System.Drawing.Point(156, 3);
+            this.dtpFechaPedido.Location = new System.Drawing.Point(109, 2);
+            this.dtpFechaPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaPedido.Name = "dtpFechaPedido";
-            this.dtpFechaPedido.Size = new System.Drawing.Size(709, 28);
+            this.dtpFechaPedido.Size = new System.Drawing.Size(471, 21);
             this.dtpFechaPedido.TabIndex = 1;
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCliente.Location = new System.Drawing.Point(3, 33);
+            this.lblCliente.Location = new System.Drawing.Point(2, 21);
+            this.lblCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(147, 34);
+            this.lblCliente.Size = new System.Drawing.Size(103, 22);
             this.lblCliente.TabIndex = 2;
             this.lblCliente.Text = "Cliente:";
             this.lblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -153,9 +160,10 @@
             this.cbxCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbxCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxCliente.FormattingEnabled = true;
-            this.cbxCliente.Location = new System.Drawing.Point(156, 36);
+            this.cbxCliente.Location = new System.Drawing.Point(109, 23);
+            this.cbxCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCliente.Name = "cbxCliente";
-            this.cbxCliente.Size = new System.Drawing.Size(709, 30);
+            this.cbxCliente.Size = new System.Drawing.Size(471, 23);
             this.cbxCliente.TabIndex = 3;
             // 
             // gbxCarrito
@@ -163,9 +171,11 @@
             this.gbxCarrito.Controls.Add(this.tlpCarrito);
             this.gbxCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbxCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxCarrito.Location = new System.Drawing.Point(13, 173);
+            this.gbxCarrito.Location = new System.Drawing.Point(9, 112);
+            this.gbxCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbxCarrito.Name = "gbxCarrito";
-            this.gbxCarrito.Size = new System.Drawing.Size(874, 334);
+            this.gbxCarrito.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxCarrito.Size = new System.Drawing.Size(586, 229);
             this.gbxCarrito.TabIndex = 2;
             this.gbxCarrito.TabStop = false;
             this.gbxCarrito.Text = "Carrito de Compras";
@@ -177,12 +187,13 @@
             this.tlpCarrito.Controls.Add(this.flpBotonesCarrito, 0, 0);
             this.tlpCarrito.Controls.Add(this.dgvCarrito, 0, 1);
             this.tlpCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCarrito.Location = new System.Drawing.Point(3, 24);
+            this.tlpCarrito.Location = new System.Drawing.Point(2, 16);
+            this.tlpCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tlpCarrito.Name = "tlpCarrito";
             this.tlpCarrito.RowCount = 2;
-            this.tlpCarrito.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tlpCarrito.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tlpCarrito.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCarrito.Size = new System.Drawing.Size(868, 307);
+            this.tlpCarrito.Size = new System.Drawing.Size(582, 211);
             this.tlpCarrito.TabIndex = 0;
             // 
             // flpBotonesCarrito
@@ -190,17 +201,19 @@
             this.flpBotonesCarrito.Controls.Add(this.btnBuscarProducto);
             this.flpBotonesCarrito.Controls.Add(this.btnEliminarProducto);
             this.flpBotonesCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpBotonesCarrito.Location = new System.Drawing.Point(3, 3);
+            this.flpBotonesCarrito.Location = new System.Drawing.Point(2, 2);
+            this.flpBotonesCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flpBotonesCarrito.Name = "flpBotonesCarrito";
-            this.flpBotonesCarrito.Size = new System.Drawing.Size(862, 44);
+            this.flpBotonesCarrito.Size = new System.Drawing.Size(578, 28);
             this.flpBotonesCarrito.TabIndex = 0;
             // 
             // btnBuscarProducto
             // 
             this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarProducto.Location = new System.Drawing.Point(3, 3);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(2, 2);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(200, 40);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(133, 26);
             this.btnBuscarProducto.TabIndex = 0;
             this.btnBuscarProducto.Text = "Buscar Producto...";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
@@ -210,9 +223,10 @@
             // 
             this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarProducto.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(209, 3);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(139, 2);
+            this.btnEliminarProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(200, 40);
+            this.btnEliminarProducto.Size = new System.Drawing.Size(133, 26);
             this.btnEliminarProducto.TabIndex = 1;
             this.btnEliminarProducto.Text = "Eliminar del Carrito";
             this.btnEliminarProducto.UseVisualStyleBackColor = true;
@@ -225,13 +239,14 @@
             this.dgvCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCarrito.Location = new System.Drawing.Point(3, 53);
+            this.dgvCarrito.Location = new System.Drawing.Point(2, 34);
+            this.dgvCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCarrito.Name = "dgvCarrito";
             this.dgvCarrito.ReadOnly = true;
             this.dgvCarrito.RowHeadersWidth = 62;
             this.dgvCarrito.RowTemplate.Height = 28;
             this.dgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCarrito.Size = new System.Drawing.Size(862, 251);
+            this.dgvCarrito.Size = new System.Drawing.Size(578, 175);
             this.dgvCarrito.TabIndex = 1;
             // 
             // tlpFooter
@@ -245,11 +260,12 @@
             this.tlpFooter.Controls.Add(this.nudTotal, 1, 0);
             this.tlpFooter.Controls.Add(this.flpAcciones, 3, 0);
             this.tlpFooter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpFooter.Location = new System.Drawing.Point(13, 513);
+            this.tlpFooter.Location = new System.Drawing.Point(9, 345);
+            this.tlpFooter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tlpFooter.Name = "tlpFooter";
             this.tlpFooter.RowCount = 1;
             this.tlpFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpFooter.Size = new System.Drawing.Size(874, 74);
+            this.tlpFooter.Size = new System.Drawing.Size(586, 48);
             this.tlpFooter.TabIndex = 3;
             // 
             // lblTotal
@@ -257,9 +273,10 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(3, 0);
+            this.lblTotal.Location = new System.Drawing.Point(2, 0);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(115, 74);
+            this.lblTotal.Size = new System.Drawing.Size(92, 48);
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "TOTAL:";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -269,7 +286,8 @@
             this.nudTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nudTotal.DecimalPlaces = 2;
             this.nudTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudTotal.Location = new System.Drawing.Point(124, 15);
+            this.nudTotal.Location = new System.Drawing.Point(98, 8);
+            this.nudTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudTotal.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -277,7 +295,7 @@
             0});
             this.nudTotal.Name = "nudTotal";
             this.nudTotal.ReadOnly = true;
-            this.nudTotal.Size = new System.Drawing.Size(200, 44);
+            this.nudTotal.Size = new System.Drawing.Size(133, 32);
             this.nudTotal.TabIndex = 1;
             this.nudTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -288,17 +306,19 @@
             this.flpAcciones.Controls.Add(this.btnGuardar);
             this.flpAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpAcciones.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flpAcciones.Location = new System.Drawing.Point(409, 3);
+            this.flpAcciones.Location = new System.Drawing.Point(276, 2);
+            this.flpAcciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flpAcciones.Name = "flpAcciones";
-            this.flpAcciones.Size = new System.Drawing.Size(462, 68);
+            this.flpAcciones.Size = new System.Drawing.Size(308, 44);
             this.flpAcciones.TabIndex = 2;
             // 
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(312, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(208, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(147, 60);
+            this.btnCerrar.Size = new System.Drawing.Size(98, 39);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -307,9 +327,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(159, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(106, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 60);
+            this.btnCancelar.Size = new System.Drawing.Size(98, 39);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar Venta";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -318,9 +339,10 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(6, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(4, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(147, 60);
+            this.btnGuardar.Size = new System.Drawing.Size(98, 39);
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar Venta";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -336,11 +358,12 @@
             // 
             // FrmVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.ClientSize = new System.Drawing.Size(604, 401);
             this.Controls.Add(this.tlpMain);
-            this.MinimumSize = new System.Drawing.Size(922, 656);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(620, 440);
             this.Name = "FrmVenta";
             this.Text = "Registro de Venta";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
