@@ -209,10 +209,11 @@ namespace CpChipSet
                     {
                         MessageBox.Show("Venta registrada exitosamente.", "::: Mensaje - ChipSet :::", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        FrmHistorialVentas frmHistorial = new FrmHistorialVentas();
-                        frmHistorial.Show();
+                        limpiar();
 
-                        this.Close();
+
+                        new FrmHistorialVentas().ShowDialog();
+
                     }
                     else
                     {

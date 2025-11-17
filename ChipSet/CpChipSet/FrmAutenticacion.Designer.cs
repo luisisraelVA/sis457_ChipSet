@@ -74,6 +74,7 @@
             this.tlpMain.SetColumnSpan(this.lblTitulo, 2);
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(13, 10);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(697, 60);
@@ -117,9 +118,10 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(3, 37);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(89, 40);
+            this.lblUsuario.Size = new System.Drawing.Size(130, 40);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario:";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -128,10 +130,11 @@
             // 
             this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(98, 45);
+            this.txtUsuario.Location = new System.Drawing.Point(139, 41);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.txtUsuario.MaxLength = 100;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(379, 24);
+            this.txtUsuario.Size = new System.Drawing.Size(338, 32);
             this.txtUsuario.TabIndex = 1;
             // 
             // lblClave
@@ -139,9 +142,10 @@
             this.lblClave.AutoSize = true;
             this.lblClave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClave.ForeColor = System.Drawing.Color.White;
             this.lblClave.Location = new System.Drawing.Point(3, 77);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(89, 40);
+            this.lblClave.Size = new System.Drawing.Size(130, 40);
             this.lblClave.TabIndex = 2;
             this.lblClave.Text = "Contraseña:";
             this.lblClave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -150,11 +154,11 @@
             // 
             this.txtClave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(98, 85);
+            this.txtClave.Location = new System.Drawing.Point(139, 81);
             this.txtClave.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(379, 24);
+            this.txtClave.Size = new System.Drawing.Size(338, 32);
             this.txtClave.TabIndex = 3;
             // 
             // flpBotones
@@ -174,9 +178,9 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = global::CpChipSet.Properties.Resources.close;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(350, 3);
+            this.btnSalir.Location = new System.Drawing.Point(391, 3);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(144, 48);
+            this.btnSalir.Size = new System.Drawing.Size(103, 48);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -188,9 +192,9 @@
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Image = global::CpChipSet.Properties.Resources.login_ok;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(200, 3);
+            this.btnIngresar.Location = new System.Drawing.Point(265, 3);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(144, 48);
+            this.btnIngresar.Size = new System.Drawing.Size(120, 48);
             this.btnIngresar.TabIndex = 0;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,7 +204,7 @@
             // FrmAutenticacion
             // 
             this.AcceptButton = this.btnIngresar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BackgroundImage = global::CpChipSet.Properties.Resources.abstract_square_interface_modern_background_concept_fingerprint_digital_scanning_visual_security_system_authentication_login_vector;

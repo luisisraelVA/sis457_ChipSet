@@ -31,14 +31,17 @@ namespace CpChipSet
  
             dgvPedidos.DataSource = lista;
 
-            dgvPedidos.Columns["id"].Visible = false;
-            dgvPedidos.Columns["idCliente"].Visible = false;
-            dgvPedidos.Columns["estado"].Visible = false;
-            dgvPedidos.Columns["nombreCliente"].HeaderText = "Cliente";
-            dgvPedidos.Columns["fechaPedido"].HeaderText = "Fecha de Pedido";
-            dgvPedidos.Columns["total"].HeaderText = "Total";
-            dgvPedidos.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
-            dgvPedidos.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
+
+              
+                dgvPedidos.Columns["id"].Visible = false;
+                dgvPedidos.Columns["idCliente"].Visible = false;
+                dgvPedidos.Columns["estado"].Visible = false;
+                dgvPedidos.Columns["nombreCliente"].HeaderText = "Cliente";
+                dgvPedidos.Columns["fechaPedido"].HeaderText = "Fecha de Pedido";
+                dgvPedidos.Columns["total"].HeaderText = "Total";
+                dgvPedidos.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
+                dgvPedidos.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
+            
 
             if (lista.Count == 0)
             {

@@ -1,86 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmhistorialventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmhistorialventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs",
-              "RelativeToolTip": "CpChipSet\\FrmPrincipal.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA1wC4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T01:22:58.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmPrincipal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.Designer.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmPrincipal.Designer.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.Designer.cs",
-              "RelativeToolTip": "CpChipSet\\FrmPrincipal.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T01:21:44.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmHistorialVentas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmHistorialVentas.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmHistorialVentas.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmHistorialVentas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmHistorialVentas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T01:10:52.568Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T01:09:32.87Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

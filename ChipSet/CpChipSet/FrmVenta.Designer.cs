@@ -57,6 +57,9 @@
             // 
             // tlpMain
             // 
+            this.tlpMain.BackColor = System.Drawing.Color.Transparent;
+            this.tlpMain.BackgroundImage = global::CpChipSet.Properties.Resources.venta;
+            this.tlpMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tlpMain.ColumnCount = 1;
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.Controls.Add(this.lblTitulo, 0, 0);
@@ -73,7 +76,7 @@
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlpMain.Size = new System.Drawing.Size(906, 617);
+            this.tlpMain.Size = new System.Drawing.Size(1279, 653);
             this.tlpMain.TabIndex = 0;
             // 
             // lblTitulo
@@ -82,7 +85,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(13, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(880, 60);
+            this.lblTitulo.Size = new System.Drawing.Size(1253, 60);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Registrar Nueva Venta";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,7 +97,7 @@
             this.gbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.Location = new System.Drawing.Point(13, 72);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(880, 94);
+            this.gbxDatos.Size = new System.Drawing.Size(1253, 94);
             this.gbxDatos.TabIndex = 1;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos del Pedido";
@@ -114,7 +117,7 @@
             this.tlpDatos.RowCount = 2;
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpDatos.Size = new System.Drawing.Size(874, 67);
+            this.tlpDatos.Size = new System.Drawing.Size(1247, 67);
             this.tlpDatos.TabIndex = 0;
             // 
             // lblFechaPedido
@@ -133,7 +136,7 @@
             this.dtpFechaPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaPedido.Location = new System.Drawing.Point(160, 3);
             this.dtpFechaPedido.Name = "dtpFechaPedido";
-            this.dtpFechaPedido.Size = new System.Drawing.Size(711, 28);
+            this.dtpFechaPedido.Size = new System.Drawing.Size(1084, 28);
             this.dtpFechaPedido.TabIndex = 1;
             // 
             // lblCliente
@@ -155,7 +158,7 @@
             this.cbxCliente.FormattingEnabled = true;
             this.cbxCliente.Location = new System.Drawing.Point(160, 36);
             this.cbxCliente.Name = "cbxCliente";
-            this.cbxCliente.Size = new System.Drawing.Size(711, 30);
+            this.cbxCliente.Size = new System.Drawing.Size(1084, 30);
             this.cbxCliente.TabIndex = 3;
             // 
             // gbxCarrito
@@ -165,7 +168,7 @@
             this.gbxCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxCarrito.Location = new System.Drawing.Point(13, 172);
             this.gbxCarrito.Name = "gbxCarrito";
-            this.gbxCarrito.Size = new System.Drawing.Size(880, 353);
+            this.gbxCarrito.Size = new System.Drawing.Size(1253, 389);
             this.gbxCarrito.TabIndex = 2;
             this.gbxCarrito.TabStop = false;
             this.gbxCarrito.Text = "Carrito de Compras";
@@ -182,7 +185,7 @@
             this.tlpCarrito.RowCount = 2;
             this.tlpCarrito.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tlpCarrito.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCarrito.Size = new System.Drawing.Size(874, 326);
+            this.tlpCarrito.Size = new System.Drawing.Size(1247, 362);
             this.tlpCarrito.TabIndex = 0;
             // 
             // flpBotonesCarrito
@@ -192,7 +195,7 @@
             this.flpBotonesCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpBotonesCarrito.Location = new System.Drawing.Point(3, 3);
             this.flpBotonesCarrito.Name = "flpBotonesCarrito";
-            this.flpBotonesCarrito.Size = new System.Drawing.Size(868, 43);
+            this.flpBotonesCarrito.Size = new System.Drawing.Size(1241, 43);
             this.flpBotonesCarrito.TabIndex = 0;
             // 
             // btnBuscarProducto
@@ -223,6 +226,7 @@
             this.dgvCarrito.AllowUserToAddRows = false;
             this.dgvCarrito.AllowUserToDeleteRows = false;
             this.dgvCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCarrito.BackgroundColor = System.Drawing.Color.White;
             this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCarrito.Location = new System.Drawing.Point(3, 52);
@@ -231,7 +235,7 @@
             this.dgvCarrito.RowHeadersWidth = 62;
             this.dgvCarrito.RowTemplate.Height = 28;
             this.dgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCarrito.Size = new System.Drawing.Size(868, 271);
+            this.dgvCarrito.Size = new System.Drawing.Size(1241, 307);
             this.dgvCarrito.TabIndex = 1;
             // 
             // tlpFooter
@@ -245,11 +249,12 @@
             this.tlpFooter.Controls.Add(this.nudTotal, 1, 0);
             this.tlpFooter.Controls.Add(this.flpAcciones, 3, 0);
             this.tlpFooter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpFooter.Location = new System.Drawing.Point(13, 531);
+            this.tlpFooter.Location = new System.Drawing.Point(13, 567);
             this.tlpFooter.Name = "tlpFooter";
             this.tlpFooter.RowCount = 1;
             this.tlpFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpFooter.Size = new System.Drawing.Size(880, 74);
+            this.tlpFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tlpFooter.Size = new System.Drawing.Size(1253, 74);
             this.tlpFooter.TabIndex = 3;
             // 
             // lblTotal
@@ -288,7 +293,7 @@
             this.flpAcciones.Controls.Add(this.btnGuardar);
             this.flpAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpAcciones.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flpAcciones.Location = new System.Drawing.Point(415, 3);
+            this.flpAcciones.Location = new System.Drawing.Point(788, 3);
             this.flpAcciones.Name = "flpAcciones";
             this.flpAcciones.Size = new System.Drawing.Size(462, 68);
             this.flpAcciones.TabIndex = 2;
@@ -338,10 +343,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 617);
+            this.ClientSize = new System.Drawing.Size(1279, 653);
             this.Controls.Add(this.tlpMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MinimumSize = new System.Drawing.Size(919, 647);
             this.Name = "FrmVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Venta";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             this.tlpMain.ResumeLayout(false);
