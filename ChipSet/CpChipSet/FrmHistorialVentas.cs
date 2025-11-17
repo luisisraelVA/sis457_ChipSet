@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CpChipSet
 {
-    // Asegúrate que el nombre de la clase coincida: FrmHistorialVentas
+
     public partial class FrmHistorialVentas : Form
     {
         public FrmHistorialVentas()
@@ -28,7 +28,7 @@ namespace CpChipSet
         {
             var lista = PedidoCln.listarPa3(txtParametro.Text.Trim());
 
-            // 1. Asignar al DGV Maestro (dgvPedidos)
+ 
             dgvPedidos.DataSource = lista;
 
             dgvPedidos.Columns["id"].Visible = false;
@@ -59,7 +59,7 @@ namespace CpChipSet
             }
         }
 
-        // Este es el evento que conecta los dos DataGridViews
+
         private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvPedidos.CurrentRow == null)
@@ -69,11 +69,11 @@ namespace CpChipSet
 
             int idPedido = (int)dgvPedidos.CurrentRow.Cells["id"].Value;
 
-            // 2. Asignar al DGV Detalle (dgvDetalles)
+  
             var listaDetalles = PedidoCln.listarDetallesSP(idPedido);
             dgvDetalles.DataSource = listaDetalles;
 
-            // Configurar columnas del Detalle
+
             if (dgvDetalles.Columns["id"] != null)
                 dgvDetalles.Columns["id"].Visible = false;
 

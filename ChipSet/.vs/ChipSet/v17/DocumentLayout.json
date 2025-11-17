@@ -1,62 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\",
+  "WorkspaceRootPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\edson\\onedrive\\desktop\\sis457_chipset\\chipset\\cpchipset\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\frmhistorialventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\cpchipset\\frmhistorialventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmhistorialventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\clnchipset\\pedidocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|solutionrelative:clnchipset\\pedidocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\clnchipset\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|solutionrelative:clnchipset\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D085DBAA-4109-4D3C-898A-DA4D6C955C22}|CadChipSet\\CadChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cadchipset\\pedidocad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D085DBAA-4109-4D3C-898A-DA4D6C955C22}|CadChipSet\\CadChipSet.csproj|solutionrelative:cadchipset\\pedidocad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\clnchipset\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|solutionrelative:clnchipset\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\clnchipset\\usuariocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95C5691-4F98-43E0-B90D-64EFC34FE960}|ClnChipSet\\ClnChipSet.csproj|solutionrelative:clnchipset\\usuariocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFFCF1EF-B92E-4A29-A18E-D7086927883C}|CpChipSet\\CpChipSet.csproj|solutionrelative:cpchipset\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,171 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmVenta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmVenta.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmVenta.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmVenta.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmVenta.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T19:44:03.471Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmCliente.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmCliente.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmCliente.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmCliente.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmCliente.cs [Dise\u00F1o]",
+              "Title": "FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "CpChipSet\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs",
+              "RelativeToolTip": "CpChipSet\\FrmPrincipal.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wC4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T19:49:48.074Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-11-17T01:22:58.515Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FrmProductos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmProductos.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmProductos.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmProductos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmProductos.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "FrmPrincipal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.Designer.cs",
+              "RelativeDocumentMoniker": "CpChipSet\\FrmPrincipal.Designer.cs",
+              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.Designer.cs",
+              "RelativeToolTip": "CpChipSet\\FrmPrincipal.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T13:12:08.195Z"
+              "WhenOpened": "2025-11-17T01:21:44.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmHistorialVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmHistorialVentas.cs",
+              "RelativeDocumentMoniker": "CpChipSet\\FrmHistorialVentas.cs",
+              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmHistorialVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpChipSet\\FrmHistorialVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:10:52.568Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FrmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "CpChipSet\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmPrincipal.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\CpChipSet\\FrmPrincipal.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpChipSet\\FrmPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T13:11:20.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FrmVenta.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmVenta.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmVenta.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmVenta.cs",
-              "RelativeToolTip": "CpChipSet\\FrmVenta.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAmwJYAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:15:10.033Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmAutenticacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmAutenticacion.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmAutenticacion.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmAutenticacion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmAutenticacion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:11:30.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmHistorialVentas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmHistorialVentas.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmHistorialVentas.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmHistorialVentas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpChipSet\\FrmHistorialVentas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T14:07:48.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PedidoCln.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\PedidoCln.cs",
-              "RelativeDocumentMoniker": "ClnChipSet\\PedidoCln.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\PedidoCln.cs",
-              "RelativeToolTip": "ClnChipSet\\PedidoCln.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwEsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:14:25.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\Properties\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\Properties\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\Properties\\AssemblyInfo.cs",
-              "RelativeToolTip": "CpChipSet\\Properties\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:14:17.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClienteCln.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\ClienteCln.cs",
-              "RelativeDocumentMoniker": "ClnChipSet\\ClienteCln.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\ClienteCln.cs",
-              "RelativeToolTip": "ClnChipSet\\ClienteCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:14:11.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PedidoCad.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CadChipSet\\PedidoCad.cs",
-              "RelativeDocumentMoniker": "CadChipSet\\PedidoCad.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CadChipSet\\PedidoCad.cs",
-              "RelativeToolTip": "CadChipSet\\PedidoCad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:13:56.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProductoCln.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\ProductoCln.cs",
-              "RelativeDocumentMoniker": "ClnChipSet\\ProductoCln.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\ProductoCln.cs",
-              "RelativeToolTip": "ClnChipSet\\ProductoCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:13:54.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UsuarioCln.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\UsuarioCln.cs",
-              "RelativeDocumentMoniker": "ClnChipSet\\UsuarioCln.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\ClnChipSet\\UsuarioCln.cs",
-              "RelativeToolTip": "ClnChipSet\\UsuarioCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:13:54.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FrmAutenticacion.cs",
-              "DocumentMoniker": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmAutenticacion.cs",
-              "RelativeDocumentMoniker": "CpChipSet\\FrmAutenticacion.cs",
-              "ToolTip": "C:\\Users\\Edson\\OneDrive\\Desktop\\sis457_ChipSet\\ChipSet\\CpChipSet\\FrmAutenticacion.cs",
-              "RelativeToolTip": "CpChipSet\\FrmAutenticacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:06:36.372Z"
+              "WhenOpened": "2025-11-17T01:09:32.87Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

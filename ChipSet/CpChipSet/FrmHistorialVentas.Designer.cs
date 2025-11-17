@@ -35,11 +35,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvDetalles);
-            this.groupBox1.Location = new System.Drawing.Point(8, 216);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 332);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(807, 183);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(1210, 282);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle del Pedido Seleccionado";
@@ -50,25 +50,25 @@
             this.dgvDetalles.AllowUserToDeleteRows = false;
             this.dgvDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalles.Location = new System.Drawing.Point(14, 18);
-            this.dgvDetalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDetalles.Location = new System.Drawing.Point(21, 28);
+            this.dgvDetalles.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvDetalles.MultiSelect = false;
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.RowHeadersWidth = 62;
             this.dgvDetalles.RowTemplate.Height = 28;
             this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalles.Size = new System.Drawing.Size(769, 153);
+            this.dgvDetalles.Size = new System.Drawing.Size(1154, 235);
             this.dgvDetalles.TabIndex = 0;
             // 
             // gbxListado
             // 
             this.gbxListado.Controls.Add(this.dgvPedidos);
-            this.gbxListado.Location = new System.Drawing.Point(8, 82);
-            this.gbxListado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxListado.Location = new System.Drawing.Point(12, 126);
+            this.gbxListado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gbxListado.Name = "gbxListado";
-            this.gbxListado.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxListado.Size = new System.Drawing.Size(807, 130);
+            this.gbxListado.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.gbxListado.Size = new System.Drawing.Size(1210, 200);
             this.gbxListado.TabIndex = 17;
             this.gbxListado.TabStop = false;
             this.gbxListado.Text = "Lista de Pedidos (Maestro)";
@@ -79,25 +79,25 @@
             this.dgvPedidos.AllowUserToDeleteRows = false;
             this.dgvPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedidos.Location = new System.Drawing.Point(17, 23);
-            this.dgvPedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPedidos.Location = new System.Drawing.Point(26, 35);
+            this.dgvPedidos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvPedidos.MultiSelect = false;
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
             this.dgvPedidos.RowHeadersWidth = 62;
             this.dgvPedidos.RowTemplate.Height = 28;
             this.dgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidos.Size = new System.Drawing.Size(769, 94);
+            this.dgvPedidos.Size = new System.Drawing.Size(1154, 145);
             this.dgvPedidos.TabIndex = 0;
             this.dgvPedidos.SelectionChanged += new System.EventHandler(this.dgvPedidos_SelectionChanged);
             // 
             // btnBuscar
             // 
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(387, 47);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(580, 72);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(77, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(116, 48);
             this.btnBuscar.TabIndex = 14;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,19 +106,20 @@
             // 
             // txtParametro
             // 
-            this.txtParametro.Location = new System.Drawing.Point(177, 53);
-            this.txtParametro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtParametro.Location = new System.Drawing.Point(266, 82);
+            this.txtParametro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(203, 20);
+            this.txtParametro.Size = new System.Drawing.Size(302, 26);
             this.txtParametro.TabIndex = 13;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 55);
+            this.label2.Location = new System.Drawing.Point(70, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
+            this.label2.Size = new System.Drawing.Size(186, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Buscar por ID de Pedido:";
             // 
@@ -127,9 +128,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 6);
+            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(806, 32);
+            this.label1.Size = new System.Drawing.Size(1209, 49);
             this.label1.TabIndex = 11;
             this.label1.Text = "Historial de Ventas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,10 +140,10 @@
             // 
             this.btnCerrar.Image = global::CpChipSet.Properties.Resources.close2;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(728, 403);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(1092, 620);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(87, 39);
+            this.btnCerrar.Size = new System.Drawing.Size(130, 60);
             this.btnCerrar.TabIndex = 19;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -150,9 +152,11 @@
             // 
             // FrmHistorialVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 450);
+            this.BackgroundImage = global::CpChipSet.Properties.Resources.chipset1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1234, 692);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.groupBox1);
@@ -160,8 +164,9 @@
             this.Controls.Add(this.gbxListado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmHistorialVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historial de Ventas";
             this.Load += new System.EventHandler(this.FrmHistorialVentas_Load);
             this.groupBox1.ResumeLayout(false);

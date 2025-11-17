@@ -36,12 +36,13 @@
             this.ribbonQat1 = new C1.Win.C1Ribbon.RibbonQat();
             this.ribbonTab1 = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup1 = new C1.Win.C1Ribbon.RibbonGroup();
+            this.ribbonTopToolBar1 = new C1.Win.C1Ribbon.RibbonTopToolBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCaProductos = new C1.Win.C1Ribbon.RibbonButton();
             this.btnCaClientes = new C1.Win.C1Ribbon.RibbonButton();
             this.btnCaVentas = new C1.Win.C1Ribbon.RibbonButton();
-            this.btnCaDetallesVenta = new C1.Win.C1Ribbon.RibbonButton();
-            this.ribbonTopToolBar1 = new C1.Win.C1Ribbon.RibbonTopToolBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ribbonTab2 = new C1.Win.C1Ribbon.RibbonTab();
+            this.ribbonGroup2 = new C1.Win.C1Ribbon.RibbonGroup();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,8 +56,9 @@
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(1285, 156);
+            this.c1Ribbon1.Size = new System.Drawing.Size(1285, 232);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
+            this.c1Ribbon1.Tabs.Add(this.ribbonTab2);
             this.c1Ribbon1.TopToolBarHolder = this.ribbonTopToolBar1;
             this.c1Ribbon1.VisualStyle = C1.Win.C1Ribbon.VisualStyle.Office2007Black;
             // 
@@ -80,16 +82,30 @@
             // 
             this.ribbonTab1.Groups.Add(this.ribbonGroup1);
             this.ribbonTab1.Name = "ribbonTab1";
-            this.ribbonTab1.Text = "Catalogos";
+            this.ribbonTab1.Text = "Administracion";
             // 
             // ribbonGroup1
             // 
             this.ribbonGroup1.Items.Add(this.btnCaProductos);
             this.ribbonGroup1.Items.Add(this.btnCaClientes);
             this.ribbonGroup1.Items.Add(this.btnCaVentas);
-            this.ribbonGroup1.Items.Add(this.btnCaDetallesVenta);
             this.ribbonGroup1.Name = "ribbonGroup1";
-            this.ribbonGroup1.Text = "Administracion de Catalogos";
+            this.ribbonGroup1.Text = "Administracion de Stock";
+            // 
+            // ribbonTopToolBar1
+            // 
+            this.ribbonTopToolBar1.Name = "ribbonTopToolBar1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::CpChipSet.Properties.Resources.chipset;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 232);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1285, 539);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // btnCaProductos
             // 
@@ -115,32 +131,20 @@
             this.btnCaVentas.Text = "Venta";
             this.btnCaVentas.Click += new System.EventHandler(this.btnCaVentas_Click);
             // 
-            // btnCaDetallesVenta
+            // ribbonTab2
             // 
-            this.btnCaDetallesVenta.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCaDetallesVenta.LargeImage")));
-            this.btnCaDetallesVenta.Name = "btnCaDetallesVenta";
-            this.btnCaDetallesVenta.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCaDetallesVenta.SmallImage")));
-            this.btnCaDetallesVenta.Text = "Detalles de Venta";
-            this.btnCaDetallesVenta.Click += new System.EventHandler(this.btnCaDetallesVenta_Click);
+            this.ribbonTab2.Groups.Add(this.ribbonGroup2);
+            this.ribbonTab2.Name = "ribbonTab2";
+            this.ribbonTab2.Text = "Venta";
             // 
-            // ribbonTopToolBar1
+            // ribbonGroup2
             // 
-            this.ribbonTopToolBar1.Name = "ribbonTopToolBar1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::CpChipSet.Properties.Resources.chipset;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1285, 615);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.ribbonGroup2.Name = "ribbonGroup2";
+            this.ribbonGroup2.Text = "Group";
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1285, 771);
             this.Controls.Add(this.pictureBox1);
@@ -151,6 +155,7 @@
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Principal - ChipSet :::";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -172,6 +177,7 @@
         private C1.Win.C1Ribbon.RibbonButton btnCaProductos;
         private C1.Win.C1Ribbon.RibbonButton btnCaClientes;
         private C1.Win.C1Ribbon.RibbonButton btnCaVentas;
-        private C1.Win.C1Ribbon.RibbonButton btnCaDetallesVenta;
+        private C1.Win.C1Ribbon.RibbonTab ribbonTab2;
+        private C1.Win.C1Ribbon.RibbonGroup ribbonGroup2;
     }
 }

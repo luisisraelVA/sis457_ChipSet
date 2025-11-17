@@ -94,7 +94,7 @@
             // 
             this.txtParametro.Location = new System.Drawing.Point(266, 95);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(632, 24);
+            this.txtParametro.Size = new System.Drawing.Size(632, 32);
             this.txtParametro.TabIndex = 8;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress_1);
             // 
@@ -104,7 +104,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 25);
+            this.label2.Size = new System.Drawing.Size(291, 37);
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar por nombre";
             // 
@@ -210,7 +210,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(539, 31);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(194, 29);
+            this.txtTelefono.Size = new System.Drawing.Size(194, 40);
             this.txtTelefono.TabIndex = 10;
             // 
             // label3
@@ -218,7 +218,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(397, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 24);
+            this.label3.Size = new System.Drawing.Size(136, 33);
             this.label3.TabIndex = 9;
             this.label3.Text = "Telefono:";
             // 
@@ -229,7 +229,7 @@
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(500, 132);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(146, 58);
+            this.btnCancelar.Size = new System.Drawing.Size(177, 58);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,9 +241,9 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = global::CpChipSet.Properties.Resources.save;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(342, 132);
+            this.btnGuardar.Location = new System.Drawing.Point(316, 132);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(138, 58);
+            this.btnGuardar.Size = new System.Drawing.Size(164, 58);
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -254,14 +254,14 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(149, 66);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(194, 29);
+            this.txtEmail.Size = new System.Drawing.Size(194, 40);
             this.txtEmail.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(149, 31);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(194, 29);
+            this.txtNombre.Size = new System.Drawing.Size(194, 40);
             this.txtNombre.TabIndex = 4;
             // 
             // lblDescripcion
@@ -269,7 +269,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(7, 70);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(62, 24);
+            this.lblDescripcion.Size = new System.Drawing.Size(97, 33);
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Email:";
             // 
@@ -278,7 +278,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(7, 32);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(84, 24);
+            this.lblNombre.Size = new System.Drawing.Size(127, 33);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -309,7 +309,7 @@
             // 
             // FrmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = global::CpChipSet.Properties.Resources.fondokpc;

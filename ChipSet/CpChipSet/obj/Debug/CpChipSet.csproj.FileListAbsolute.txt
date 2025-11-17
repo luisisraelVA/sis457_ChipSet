@@ -96,3 +96,5 @@ C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChi
 C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.pdb
 C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmHistorialVentas.resources
 C:\Users\Edson\OneDrive\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmVenta.resources
+C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.FrmHistorialVentas.resources
+C:\Users\stopg\Desktop\Lab_SIS457\Chipset\CpChipSet\obj\Debug\CpChipSet.FrmVenta.resources

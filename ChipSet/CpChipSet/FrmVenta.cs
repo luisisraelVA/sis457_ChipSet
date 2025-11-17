@@ -154,7 +154,6 @@ namespace CpChipSet
             frmBuscar.ShowDialog();
         }
 
-        // Evento del botón "Eliminar del Carrito"
         private void btnEliminarProducto_Click(object sender, EventArgs e)
         {
             if (dgvCarrito.CurrentRow != null)
