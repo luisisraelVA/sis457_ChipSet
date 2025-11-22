@@ -126,7 +126,6 @@ SELECT  p.id,p.idProveedor,p.nombre,pr.nombre as nombreProveedor,p.descripcion,p
     ORDER BY 
         p.estado DESC, p.nombre ASC;
 
-EXEC paProductoListar '';
 
 
 DROP PROC IF EXISTS paClienteListar;
@@ -145,7 +144,7 @@ FROM
     Cliente c
 WHERE
     c.estado > -1
-    -- Aquí está la corrección: ISNULL(c.email, '')
+
     AND (c.nombre + ISNULL(c.email, '') + ISNULL(c.telefono, '')) LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
 ORDER BY
     c.estado DESC, c.nombre ASC;
@@ -176,7 +175,6 @@ ORDER BY
     pe.estado DESC, pe.fechaPedido DESC;
 GO
 
-EXEC paPedidoListar '';
 
 
 GO
@@ -188,7 +186,7 @@ SELECT
     d.id,
     d.idPedido,
     d.idProducto,
-    p.nombre AS nombreProducto, -- Útil para mostrar en el dgvCarrito
+    p.nombre AS nombreProducto,
     d.cantidad,
     d.precioUnitario
 FROM 
@@ -200,27 +198,15 @@ WHERE
 
 
 
-INSERT INTO Proveedor (nombre, telefono) VALUES
-('TechMayorista S.A.', '555-1000'),
-('Global Hardware Corp.', '555-2000');
 
-INSERT INTO Cliente (nombre, email, telefono) VALUES
-('Ana Torres', 'ana.t@email.com', '999-1111'),
-('Carlos Ruiz', 'carlos.r@email.com', '999-2222');
 
-INSERT INTO Producto (idProveedor, nombre, descripcion, precioVenta, stock) VALUES
-(1, 'Memoria RAM DDR4 16GB', 'Módulo de 16GB, 3200MHz', 45.50, 150),
-(1, 'Disco SSD M.2 500GB', 'Unidad de estado sólido NVMe, 500GB', 35.99, 80),
-(2, 'Tarjeta Gráfica RTX 4060', '8GB GDDR6, ideal para gaming', 349.99, 45),
-(2, 'Procesador Ryzen 5 5600', 'CPU de 6 núcleos y 12 hilos', 125.00, 60);
 
-INSERT INTO Pedido (idCliente, fechaPedido, total) VALUES
-(1, CAST(GETDATE() AS DATE), 150.00);
+
+
 
 INSERT INTO Usuario(usuario,clave)
 VALUES ('chipset', 'i0hcoO/nssY6WOs9pOp5Xw=='); -- Clave: hola123
 
-SELECT * FROM Pedido;
 
 
 INSERT INTO Proveedor (nombre, telefono, usuarioRegistro) VALUES
@@ -231,7 +217,7 @@ INSERT INTO Proveedor (nombre, telefono, usuarioRegistro) VALUES
 ('Periféricos Pro', '555-5000', 'chipset');
 GO
 
--- Insertar Clientes (10)
+
 INSERT INTO Cliente (nombre, email, telefono, usuarioRegistro) VALUES
 ('Ana Torres', 'ana.t@email.com', '999-1111', 'chipset'),
 ('Carlos Ruiz', 'carlos.r@email.com', '999-2222', 'chipset'),
@@ -245,7 +231,7 @@ INSERT INTO Cliente (nombre, email, telefono, usuarioRegistro) VALUES
 ('Pedro Infante', 'pedro.i@email.com', '999-0000', 'chipset');
 GO
 
--- Insertar Productos (15)
+
 INSERT INTO Producto (idProveedor, nombre, descripcion, precioVenta, stock, usuarioRegistro) VALUES
 (1, 'Memoria RAM DDR4 16GB', 'Módulo de 16GB, 3200MHz', 45.50, 150, 'chipset'),
 (1, 'Disco SSD M.2 500GB', 'Unidad de estado sólido NVMe, 500GB', 35.99, 80, 'chipset'),
@@ -264,50 +250,135 @@ INSERT INTO Producto (idProveedor, nombre, descripcion, precioVenta, stock, usua
 (5, 'Auriculares Gamer 7.1', 'Sonido envolvente, micrófono retráctil', 49.99, 120, 'chipset');
 GO
 
--- Insertar Pedidos (8)
--- Los totales están calculados para coincidir con los detalles
+
 INSERT INTO Pedido (idCliente, fechaPedido, total, usuarioRegistro) VALUES
-(1, '2025-10-01', 81.49, 'chipset'),  -- Pedido 1 (Ana)
-(2, '2025-10-05', 349.99, 'chipset'), -- Pedido 2 (Carlos)
-(3, '2025-10-10', 265.00, 'chipset'), -- Pedido 3 (Bartolito)
-(4, '2025-10-12', 126.99, 'chipset'), -- Pedido 4 (Luisa)
-(5, '2025-10-15', 295.50, 'chipset'), -- Pedido 5 (Miguel)
-(6, '2025-10-20', 195.00, 'chipset'), -- Pedido 6 (Javier)
-(7, '2025-10-22', 114.99, 'chipset'), -- Pedido 7 (Sofia)
-(1, '2025-10-25', 425.00, 'chipset');  -- Pedido 8 (Ana otra vez)
+(1, '2025-10-01', 81.49, 'chipset'),  
+(2, '2025-10-05', 349.99, 'chipset'),
+(3, '2025-10-10', 265.00, 'chipset'),
+(4, '2025-10-12', 126.99, 'chipset'), 
+(5, '2025-10-15', 295.50, 'chipset'), 
+(6, '2025-10-20', 195.00, 'chipset'), 
+(7, '2025-10-22', 114.99, 'chipset'), 
+(1, '2025-10-25', 425.00, 'chipset'); 
 GO
 
--- Insertar Detalles de Pedido (para los 8 pedidos)
+
 INSERT INTO DetallePedido (idPedido, idProducto, cantidad, precioUnitario, usuarioRegistro) VALUES
--- Pedido 1 (Total: 81.49)
-(1, 2, 1, 35.99, 'chipset'), -- SSD M.2 500GB
-(1, 1, 1, 45.50, 'chipset'), -- RAM DDR4 16GB
+(1, 2, 1, 35.99, 'chipset'), 
+(1, 1, 1, 45.50, 'chipset'), 
 
--- Pedido 2 (Total: 349.99)
-(2, 3, 1, 349.99, 'chipset'), -- RTX 4060
 
--- Pedido 3 (Total: 265.00)
-(3, 7, 1, 210.00, 'chipset'), -- Monitor Curvo 27"
-(3, 8, 1, 55.00, 'chipset'), -- Teclado Mecánico
+(2, 3, 1, 349.99, 'chipset'), 
 
--- Pedido 4 (Total: 126.99)
-(4, 1, 2, 45.50, 'chipset'), -- 2x RAM DDR4 16GB
-(4, 2, 1, 35.99, 'chipset'), -- 1x SSD M.2 500GB
 
--- Pedido 5 (Total: 295.50)
-(5, 4, 1, 125.00, 'chipset'), -- Procesador Ryzen 5
-(5, 5, 1, 95.00, 'chipset'), -- Placa Madre B550M
-(5, 6, 1, 75.50, 'chipset'), -- Fuente de Poder 650W
+(3, 7, 1, 210.00, 'chipset'),
+(3, 8, 1, 55.00, 'chipset'),
 
--- Pedido 6 (Total: 195.00)
-(6, 11, 1, 85.00, 'chipset'), -- Gabinete ATX
-(6, 12, 1, 110.00, 'chipset'), -- Refrigeración Líquida
+(4, 1, 2, 45.50, 'chipset'), 
+(4, 2, 1, 35.99, 'chipset'), 
 
--- Pedido 7 (Total: 114.99)
-(7, 9, 1, 65.00, 'chipset'), -- Mouse Gamer
-(7, 15, 1, 49.99, 'chipset'), -- Auriculares Gamer
 
--- Pedido 8 (Total: 425.00)
-(8, 13, 1, 310.00, 'chipset'), -- Procesador Core i5
-(8, 14, 1, 115.00, 'chipset'); -- RAM DDR5 32GB
+(5, 4, 1, 125.00, 'chipset'),
+(5, 5, 1, 95.00, 'chipset'),
+(5, 6, 1, 75.50, 'chipset'), 
+
+
+(6, 11, 1, 85.00, 'chipset'),
+(6, 12, 1, 110.00, 'chipset'),
+
+
+(7, 9, 1, 65.00, 'chipset'), 
+(7, 15, 1, 49.99, 'chipset'), 
+
+
+(8, 13, 1, 310.00, 'chipset'), 
+(8, 14, 1, 115.00, 'chipset'); 
 GO
+
+
+DELETE FROM DetallePedido;
+DELETE FROM Pedido;
+DELETE FROM Producto;
+DELETE FROM Cliente;
+DELETE FROM Proveedor;
+GO
+
+-- 2. REINICIAR CONTADORES DE IDENTIDAD
+DBCC CHECKIDENT ('DetallePedido', RESEED, 0);
+DBCC CHECKIDENT ('Pedido', RESEED, 0);
+DBCC CHECKIDENT ('Producto', RESEED, 0);
+DBCC CHECKIDENT ('Cliente', RESEED, 0);
+DBCC CHECKIDENT ('Proveedor', RESEED, 0);
+GO
+
+-- 3. INSERTAR DATOS (Este es tu script)
+
+INSERT INTO Proveedor (nombre, telefono, usuarioRegistro) VALUES
+('TechMayorista S.A.', '555-1000', 'chipset'),
+('Global Hardware Corp.', '555-2000', 'chipset'),
+('Importaciones PC-Sucre', '555-3000', 'chipset'),
+('Componentes Bolivia', '555-4000', 'chipset'),
+('Periféricos Pro', '555-5000', 'chipset');
+GO
+
+INSERT INTO Cliente (nombre, email, telefono, usuarioRegistro) VALUES
+('Ana Torres', 'ana.t@email.com', '999-1111', 'chipset'),
+('Carlos Ruiz', 'carlos.r@email.com', '999-2222', 'chipset'),
+('Bartolomé "Bartolito" Diaz', 'barto@email.com', '999-3333', 'chipset'),
+('Luisa Mendoza', 'luisa.m@email.com', '999-4444', 'chipset'),
+('Miguel Cervantes', 'miguel.c@email.com', '999-5555', 'chipset'),
+('Javier Fernandez', 'javi.f@email.com', '999-6666', 'chipset'),
+('Sofia Castro', 'sofia.c@email.com', '999-7777', 'chipset'),
+('David Vargas', 'david.v@email.com', '999-8888', 'chipset'),
+('Elena Paredes', 'elena.p@email.com', '999-9999', 'chipset'),
+('Pedro Infante', 'pedro.i@email.com', '999-0000', 'chipset');
+GO
+
+INSERT INTO Producto (idProveedor, nombre, descripcion, precioVenta, stock, usuarioRegistro) VALUES
+(1, 'Memoria RAM DDR4 16GB', 'Módulo de 16GB, 3200MHz', 45.50, 150, 'chipset'),
+(1, 'Disco SSD M.2 500GB', 'Unidad de estado sólido NVMe, 500GB', 35.99, 80, 'chipset'),
+(2, 'Tarjeta Gráfica RTX 4060', '8GB GDDR6, ideal para gaming', 349.99, 45, 'chipset'),
+(2, 'Procesador Ryzen 5 5600', 'CPU de 6 núcleos y 12 hilos', 125.00, 60, 'chipset'),
+(3, 'Placa Madre B550M', 'Placa base AM4, mATX, PCIe 4.0', 95.00, 75, 'chipset'),
+(4, 'Fuente de Poder 650W', 'Certificación 80+ Bronze, modular', 75.50, 100, 'chipset'),
+(5, 'Monitor Curvo 27"', 'Panel VA, 165Hz, 1ms, Full HD', 210.00, 30, 'chipset'),
+(5, 'Teclado Mecánico RGB', 'Switches Blue, layout español', 55.00, 200, 'chipset'),
+(5, 'Mouse Gamer Inalámbrico', 'Sensor óptico 16000 DPI, 6 botones', 65.00, 150, 'chipset'),
+(1, 'Disco Duro Externo 2TB', 'USB 3.0, portátil', 60.00, 50, 'chipset'),
+(3, 'Gabinete ATX Mid-Tower', 'Panel lateral de vidrio templado, 3 ventiladores ARGB', 85.00, 40, 'chipset'),
+(4, 'Refrigeración Líquida 240mm', 'Doble ventilador, ARGB, compatible Intel/AMD', 110.00, 35, 'chipset'),
+(2, 'Procesador Core i5 13600K', '14 núcleos, 20 hilos, LGA1700', 310.00, 55, 'chipset'),
+(1, 'Memoria RAM DDR5 32GB Kit', 'Kit 2x16GB, 6000MHz, CL36', 115.00, 90, 'chipset'),
+(5, 'Auriculares Gamer 7.1', 'Sonido envolvente, micrófono retráctil', 49.99, 120, 'chipset');
+GO
+
+INSERT INTO Pedido (idCliente, fechaPedido, total, usuarioRegistro) VALUES
+(1, '2025-10-01', 81.49, 'chipset'),  
+(2, '2025-10-05', 349.99, 'chipset'), 
+(3, '2025-10-10', 265.00, 'chipset'), 
+(4, '2025-10-12', 126.99, 'chipset'), 
+(5, '2025-10-15', 295.50, 'chipset'), 
+(6, '2025-10-20', 195.00, 'chipset'), 
+(7, '2025-10-22', 114.99, 'chipset'), 
+(1, '2025-10-25', 425.00, 'chipset'); 
+GO
+
+INSERT INTO DetallePedido (idPedido, idProducto, cantidad, precioUnitario, usuarioRegistro) VALUES
+(1, 2, 1, 35.99, 'chipset'), 
+(1, 1, 1, 45.50, 'chipset'), 
+(2, 3, 1, 349.99, 'chipset'), 
+(3, 7, 1, 210.00, 'chipset'),
+(3, 8, 1, 55.00, 'chipset'),
+(4, 1, 2, 45.50, 'chipset'), 
+(4, 2, 1, 35.99, 'chipset'), 
+(5, 4, 1, 125.00, 'chipset'),
+(5, 5, 1, 95.00, 'chipset'),
+(5, 6, 1, 75.50, 'chipset'), 
+(6, 11, 1, 85.00, 'chipset'),
+(6, 12, 1, 110.00, 'chipset'),
+(7, 9, 1, 65.00, 'chipset'), 
+(7, 15, 1, 49.99, 'chipset'), 
+(8, 13, 1, 310.00, 'chipset'), 
+(8, 14, 1, 115.00, 'chipset'); 
+GO
+select * from Usuario;

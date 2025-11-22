@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LabChipSetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LabChipSetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="id" />
@@ -164,8 +164,7 @@
             <End Role="Producto" EntitySet="Producto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LabChipSetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -324,16 +323,16 @@
             <End Role="Producto" EntitySet="Producto" />
           </AssociationSet>
           <FunctionImport Name="paClienteListar" ReturnType="Collection(LabChipSetModel.paClienteListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paDetallePedidoListar" ReturnType="Collection(LabChipSetModel.paDetallePedidoListar_Result)">
-            <Parameter Name="idPedido" Mode="In" Type="Int32" />
+          <Parameter Name="idPedido" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="paPedidoListar" ReturnType="Collection(LabChipSetModel.paPedidoListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paProductoListar" ReturnType="Collection(LabChipSetModel.paProductoListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="paClienteListar_Result">
