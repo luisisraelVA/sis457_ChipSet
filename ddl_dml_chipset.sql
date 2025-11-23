@@ -1,4 +1,4 @@
-﻿CREATE DATABASE LabChipSet;
+CREATE DATABASE LabChipSet;
 GO
 USE master
 GO 
