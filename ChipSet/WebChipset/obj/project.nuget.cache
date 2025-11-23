@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n7H2lHb+Bro=",
+  "dgSpecHash": "3+12IGFJSS0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ChipSet\\WebChipset\\WebChipset.csproj",
+  "projectFilePath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\WebChipset.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stopg\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\stopg\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

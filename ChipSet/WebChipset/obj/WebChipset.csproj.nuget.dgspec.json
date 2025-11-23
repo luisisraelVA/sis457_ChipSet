@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ChipSet\\WebChipset\\WebChipset.csproj": {}
+    "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\WebChipset.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ChipSet\\WebChipset\\WebChipset.csproj": {
+    "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\WebChipset.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ChipSet\\WebChipset\\WebChipset.csproj",
+        "projectUniqueName": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\WebChipset.csproj",
         "projectName": "WebChipset",
-        "projectPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\ChipSet\\WebChipset\\WebChipset.csproj",
+        "projectPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\WebChipset.csproj",
         "packagesPath": "C:\\Users\\stopg\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\obj\\",
         "projectStyle": "PackageReference",

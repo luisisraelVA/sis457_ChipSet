@@ -19,10 +19,27 @@ namespace WebChipset.Controllers
         }
 
         // GET: Productos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-            var labChipSetContext = _context.Producto.Include(p => p.IdCategoriaNavigation).Include(p => p.IdProveedorNavigation);
-            return View(await labChipSetContext.ToListAsync());
+            var query = _context.Producto
+                .Include(p => p.IdCategoriaNavigation)
+                .Include(p => p.IdProveedorNavigation)
+                .AsQueryable();
+
+
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                query = query.Where(p =>
+                    p.Nombre.Contains(buscar) ||
+                    p.IdCategoriaNavigation.Nombre.Contains(buscar) ||
+                    p.IdProveedorNavigation.Nombre.Contains(buscar)
+                );
+            }
+
+
+            ViewData["BusquedaActual"] = buscar;
+
+            return View(await query.ToListAsync());
         }
 
         // GET: Productos/Details/5
@@ -164,7 +181,8 @@ namespace WebChipset.Controllers
             var producto = await _context.Producto.FindAsync(id);
             if (producto != null)
             {
-                _context.Producto.Remove(producto);
+                producto.Estado = 0;
+                _context.Update(producto);
             }
 
             await _context.SaveChangesAsync();
