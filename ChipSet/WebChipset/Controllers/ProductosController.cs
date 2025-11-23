@@ -48,8 +48,8 @@ namespace WebChipset.Controllers
         // GET: Productos/Create
         public IActionResult Create()
         {
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id");
-            ViewData["IdProveedor"] = new SelectList(_context.Proveedor, "Id", "Id");
+            ViewData["ListaCategorias"] = new SelectList(_context.Categoria, "Id", "Nombre");
+            ViewData["ListaProveedores"] = new SelectList(_context.Proveedor, "Id", "Nombre");
             return View();
         }
 
@@ -60,14 +60,22 @@ namespace WebChipset.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,IdProveedor,IdCategoria,Nombre,Descripcion,PrecioVenta,Stock,UsuarioRegistro,FechaRegistro,Estado")] Producto producto)
         {
+            producto.FechaRegistro = DateTime.Now;
+            producto.UsuarioRegistro = "Admin";
+
+            ModelState.Remove("IdCategoriaNavigation");
+            ModelState.Remove("IdProveedorNavigation");
+            ModelState.Remove("UsuarioRegistro");
+            ModelState.Remove("FechaRegistro");
+
             if (ModelState.IsValid)
             {
                 _context.Add(producto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", producto.IdCategoria);
-            ViewData["IdProveedor"] = new SelectList(_context.Proveedor, "Id", "Id", producto.IdProveedor);
+            ViewData["ListaCategorias"] = new SelectList(_context.Categoria, "Id", "Nombre", producto.IdCategoria);
+            ViewData["ListaProveedores"] = new SelectList(_context.Proveedor, "Id", "Nombre", producto.IdProveedor);
             return View(producto);
         }
 
@@ -84,8 +92,8 @@ namespace WebChipset.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", producto.IdCategoria);
-            ViewData["IdProveedor"] = new SelectList(_context.Proveedor, "Id", "Id", producto.IdProveedor);
+            ViewData["ListaCategorias"] = new SelectList(_context.Categoria, "Id", "Nombre", producto.IdCategoria);
+            ViewData["ListaProveedores"] = new SelectList(_context.Proveedor, "Id", "Nombre", producto.IdProveedor);
             return View(producto);
         }
 
@@ -100,6 +108,8 @@ namespace WebChipset.Controllers
             {
                 return NotFound();
             }
+            ModelState.Remove("IdCategoriaNavigation");
+            ModelState.Remove("IdProveedorNavigation");
 
             if (ModelState.IsValid)
             {
@@ -121,8 +131,8 @@ namespace WebChipset.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", producto.IdCategoria);
-            ViewData["IdProveedor"] = new SelectList(_context.Proveedor, "Id", "Id", producto.IdProveedor);
+            ViewData["ListaCategorias"] = new SelectList(_context.Categoria, "Id", "Nombre", producto.IdCategoria);
+            ViewData["ListaProveedores"] = new SelectList(_context.Proveedor, "Id", "Nombre", producto.IdProveedor);
             return View(producto);
         }
 
