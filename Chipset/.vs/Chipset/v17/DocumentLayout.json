@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebChipset\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebChipset\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T09:17:02.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\appsettings.json",
+              "RelativeDocumentMoniker": "WebChipset\\appsettings.json",
+              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\appsettings.json",
+              "RelativeToolTip": "WebChipset\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-25T09:15:03.929Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
