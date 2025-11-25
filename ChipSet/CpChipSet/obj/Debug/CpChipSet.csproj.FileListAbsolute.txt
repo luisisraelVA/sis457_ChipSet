@@ -30,3 +30,36 @@ C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.csproj.C
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.csproj.Up2Date
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\CpChipSet\obj\Debug\CpChipSet.pdb
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CpChipSet.exe.config
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CpChipSet.exe
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CpChipSet.pdb
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\C1.Win.4.5.2.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\C1.Win.C1Ribbon.4.5.2.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CadChipSet.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\ClnChipSet.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CadChipSet.pdb
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\CadChipSet.dll.config
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\ClnChipSet.pdb
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\ClnChipSet.dll.config
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\C1.Win.4.5.2.xml
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\C1.Win.C1Ribbon.4.5.2.xml
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.csproj.AssemblyReference.cache
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe.config
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmAutenticacion.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmBuscarProducto.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmCliente.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmHistorialVentas.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmPrincipal.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmProductos.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.FrmVenta.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.Properties.Resources.resources
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.csproj.GenerateResource.cache
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe.licenses
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.csproj.Up2Date
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.exe
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\CpChipSet\obj\Debug\CpChipSet.pdb

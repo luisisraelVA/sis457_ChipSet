@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebChipset")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e53ab3ef6a1e5c54970da74ec8c2e513efc58b1e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c087e90a69345a14cad4f6c176e010a59ca79c3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebChipset")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebChipset")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

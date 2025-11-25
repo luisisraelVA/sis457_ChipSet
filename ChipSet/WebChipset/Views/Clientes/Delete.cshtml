@@ -1,0 +1,89 @@
+﻿@model WebChipset.Models.Cliente
+
+@{
+    ViewData["Title"] = "Eliminar Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<div class="container mt-4">
+    <div class="card shadow-sm border-danger">
+        <div class="card-header bg-danger text-white">
+            <h4 class="mb-0">
+                <i class="fa-solid fa-triangle-exclamation"></i> ¿Está seguro de que desea eliminar este Cliente?
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+                <i class="fa-solid fa-circle-exclamation"></i> Esta acción no se puede deshacer. Verifique los datos antes de continuar.
+            </div>
+
+            <dl class="row">
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-9 fw-bold fs-5 text-danger">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Telefono)
+                </dd>
+
+
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Estado)
+                </dt>
+                <dd class="col-sm-9">
+                    @if (Model.Estado == 1)
+                    {
+                        <span class="badge bg-success"><i class="fa-solid fa-check"></i> Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger"><i class="fa-solid fa-xmark"></i> Inactivo</span>
+                    }
+                </dd>
+
+
+
+
+                <dt class="col-sm-3 text-muted small">
+                    @Html.DisplayNameFor(model => model.UsuarioRegistro)
+                </dt>
+                <dd class="col-sm-9 text-muted small">
+                    @Html.DisplayFor(model => model.UsuarioRegistro)
+                </dd>
+                <dt class="col-sm-3 text-muted small">
+                    @Html.DisplayNameFor(model => model.FechaRegistro)
+                </dt>
+                <dd class="col-sm-9 text-muted small">
+                    @Html.DisplayFor(model => model.FechaRegistro)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer">
+            <form asp-action="Delete" class="d-flex justify-content-between">
+                <input type="hidden" asp-for="Id" />
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Cancelar / Volver
+                </a>
+                <button type="submit" class="btn btn-danger">
+                    <i class="fa-solid fa-trash-can"></i> Confirmar Eliminación
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

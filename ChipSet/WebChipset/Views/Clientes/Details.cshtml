@@ -1,0 +1,80 @@
+﻿@model WebChipset.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalles del Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0"><i class="fa-solid fa-user-tag"></i> Detalles del Cliente</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <!-- Información Principal -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-9 fw-bold">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Telefono)
+                </dd>
+
+            
+
+            
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Estado)
+                </dt>
+                <dd class="col-sm-9">
+                    @if (Model.Estado == 1)
+                    {
+                        <span class="badge bg-success"><i class="fa-solid fa-check"></i> Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger"><i class="fa-solid fa-xmark"></i> Inactivo</span>
+                    }
+                </dd>
+
+
+                <dt class="col-sm-3 text-muted small">
+                    Registrado por
+                </dt>
+                <dd class="col-sm-9 text-muted small">
+                    @Html.DisplayFor(model => model.UsuarioRegistro)
+                </dd>
+                <dt class="col-sm-3 text-muted small">
+                    Fecha Registro
+                </dt>
+                <dd class="col-sm-9 text-muted small">
+                    @Html.DisplayFor(model => model.FechaRegistro)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-left"></i> Volver a la Lista
+            </a>
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">
+                <i class="fa-solid fa-pen-to-square"></i> Editar Cliente
+            </a>
+        </div>
+    </div>
+</div>

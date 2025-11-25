@@ -1,0 +1,83 @@
+﻿@model WebChipset.Models.Cliente
+
+@{
+    ViewData["Title"] = "Editar Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0"><i class="fa-solid fa-user-pen"></i> Editar Cliente</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- Campo oculto para el ID, crucial para la edición -->
+                <input type="hidden" asp-for="Id" />
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Nombre" class="form-label fw-bold">Nombre Completo</label>
+                        <input asp-for="Nombre" class="form-control" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Email" class="form-label fw-bold">Correo Electrónico</label>
+                        <input asp-for="Email" class="form-control" type="email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Telefono" class="form-label fw-bold">Teléfono</label>
+                        <input asp-for="Telefono" class="form-control" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Estado" class="form-label fw-bold">Estado</label>
+                        <select asp-for="Estado" class="form-select form-control">
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
+                        <span asp-validation-for="Estado" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <hr />
+                <h6 class="text-muted mb-3">Información de Auditoría (Solo lectura)</h6>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="UsuarioRegistro" class="form-label small">Registrado por:</label>
+                        <input asp-for="UsuarioRegistro" class="form-control form-control-sm bg-light" readonly />
+                        <span asp-validation-for="UsuarioRegistro" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="FechaRegistro" class="form-label small">Fecha Registro:</label>
+                        <input asp-for="FechaRegistro" class="form-control form-control-sm bg-light" readonly />
+                        <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a la Lista
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<WebChipset.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<h1>Clientes</h1>
+
+<div class="row mb-3 align-items-center">
+    <div class="col-md-4">
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i> Crear Nuevo Cliente
+        </a>
+    </div>
+    <div class="col-md-8">
+        <form asp-action="Index" method="get">
+            <div class="input-group">
+                <input type="text" name="buscar" class="form-control"
+                       placeholder="Buscar por nombre, email o teléfono..."
+                       value="@ViewData["BusquedaActual"]">
+
+                <button type="submit" class="btn btn-outline-secondary">
+                    <i class="fa-solid fa-magnifying-glass"></i> Buscar
+                </button>
+                @if (ViewData["BusquedaActual"] != null)
+                {
+                    <a asp-action="Index" class="btn btn-outline-danger" title="Limpiar filtro">
+                        <i class="fa-solid fa-eraser"></i>
+                    </a>
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th class="text-center" style="min-width: 120px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="fw-bold">
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @if (item.Estado == 1)
+                    {
+                        <span class="text-success"><i class="fa-solid fa-check"></i> Activo</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger"><i class="fa-solid fa-xmark"></i> Inactivo</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UsuarioRegistro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaRegistro)
+                </td>
+                <td class="text-center" style="min-width: 120px;">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm" title="Editar">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm" title="Detalles">
+                        <i class="fa-solid fa-eye"></i>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" title="Eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

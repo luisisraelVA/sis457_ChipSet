@@ -1,0 +1,61 @@
+﻿@model WebChipset.Models.Cliente
+
+@{
+    ViewData["Title"] = "Crear Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0"><i class="fa-solid fa-user-plus"></i> Nuevo Cliente</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
+
+                <div class="row">
+                    <!-- Nombre -->
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Nombre" class="form-label fw-bold"><i class="fa-solid fa-signature"></i> Nombre</label>
+                        <input asp-for="Nombre" class="form-control" placeholder="Nombre completo del cliente" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Email" class="form-label fw-bold"><i class="fa-solid fa-envelope"></i> Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="ejemplo@dominio.com" type="email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="mb-3">
+                    <label asp-for="Telefono" class="form-label fw-bold"><i class="fa-solid fa-phone"></i> Teléfono</label>
+                    <input asp-for="Telefono" class="form-control" placeholder="Número de teléfono de contacto" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+
+                <hr class="my-4" />
+
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a la Lista
+                    </a>
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Cliente
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

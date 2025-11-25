@@ -1,34 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\lenovo 00\\desktop\\sis457_chipset\\chipset\\webchipset\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\lenovo 00\\desktop\\sis457_chipset\\chipset\\webchipset\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\views\\productos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\productos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\lenovo 00\\desktop\\sis457_chipset\\chipset\\webchipset\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\lenovo 00\\desktop\\sis457_chipset\\chipset\\webchipset\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\views\\productos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\productos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\lenovo 00\\desktop\\sis457_chipset\\chipset\\webchipset\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\views\\productos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\views\\productos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\stopg\\desktop\\lab_sis457\\chipset\\webchipset\\models\\labchipsetcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\models\\labchipsetcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|c:\\users\\lenovo 00\\desktop\\sis457_chipset\\chipset\\webchipset\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C803C090-510B-4AC6-9D6F-73E59822B937}|WebChipset\\WebChipset.csproj|solutionrelative:webchipset\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,94 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Delete.cshtml",
-              "RelativeDocumentMoniker": "WebChipset\\Views\\Productos\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Delete.cshtml",
-              "RelativeToolTip": "WebChipset\\Views\\Productos\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T13:49:07.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Details.cshtml",
-              "RelativeDocumentMoniker": "WebChipset\\Views\\Productos\\Details.cshtml",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Details.cshtml",
-              "RelativeToolTip": "WebChipset\\Views\\Productos\\Details.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAC4AAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T13:27:14.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Edit.cshtml",
-              "RelativeDocumentMoniker": "WebChipset\\Views\\Productos\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Edit.cshtml",
-              "RelativeToolTip": "WebChipset\\Views\\Productos\\Edit.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAmwCgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T13:16:20.819Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebChipset\\Views\\Productos\\Create.cshtml",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Create.cshtml",
-              "RelativeToolTip": "WebChipset\\Views\\Productos\\Create.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAAAmwEUAAAATAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebChipset\\Views\\Clientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Create.cshtml",
+              "RelativeToolTip": "WebChipset\\Views\\Clientes\\Create.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAYwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T13:00:11.084Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebChipset\\Views\\Productos\\Index.cshtml",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Views\\Productos\\Index.cshtml",
-              "RelativeToolTip": "WebChipset\\Views\\Productos\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T12:33:36.84Z",
+              "WhenOpened": "2025-11-25T09:10:55.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "WebChipset\\Controllers\\ProductosController.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "WebChipset\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAmwCYAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T12:05:48.512Z",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebChipset\\Views\\Clientes\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Delete.cshtml",
+              "RelativeToolTip": "WebChipset\\Views\\Clientes\\Delete.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAADAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T09:10:32.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LabChipSetContext.cs",
-              "DocumentMoniker": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Models\\LabChipSetContext.cs",
-              "RelativeDocumentMoniker": "WebChipset\\Models\\LabChipSetContext.cs",
-              "ToolTip": "C:\\Users\\stopg\\Desktop\\Lab_SIS457\\Chipset\\WebChipset\\Models\\LabChipSetContext.cs",
-              "RelativeToolTip": "WebChipset\\Models\\LabChipSetContext.cs",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAcwCUAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebChipset\\Views\\Clientes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Details.cshtml",
+              "RelativeToolTip": "WebChipset\\Views\\Clientes\\Details.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAMwCYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T09:10:12.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebChipset\\Views\\Clientes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Edit.cshtml*",
+              "RelativeToolTip": "WebChipset\\Views\\Clientes\\Edit.cshtml*",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAYwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T09:09:37.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebChipset\\Views\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "WebChipset\\Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwGgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T09:08:49.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "WebChipset\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\LENOVO 00\\Desktop\\sis457_ChipSet\\ChipSet\\WebChipset\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "WebChipset\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T11:57:51.155Z"
+              "WhenOpened": "2025-11-25T09:08:02.927Z",
+              "EditorCaption": ""
             }
           ]
         }

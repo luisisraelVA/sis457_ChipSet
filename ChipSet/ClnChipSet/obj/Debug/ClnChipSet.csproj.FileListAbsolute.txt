@@ -43,3 +43,18 @@ C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.csproj
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.csproj.Up2Date
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.dll
 C:\Users\stopg\Desktop\Lab_SIS457\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.pdb
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\ClnChipSet.dll.config
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\ClnChipSet.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\ClnChipSet.pdb
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\CadChipSet.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\CadChipSet.pdb
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\CadChipSet.dll.config
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.csproj.AssemblyReference.cache
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.csproj.Up2Date
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.dll
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\ClnChipSet\obj\Debug\ClnChipSet.pdb
