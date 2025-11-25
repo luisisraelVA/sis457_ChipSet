@@ -1,0 +1,256 @@
+﻿@{
+    ViewData["Title"] = "Nueva Venta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Punto de Venta</h3>
+            <span class="badge bg-light text-primary fs-6">@DateTime.Now.ToString("dd/MM/yyyy")</span>
+        </div>
+        <div class="card-body">
+
+
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <label class="form-label fw-bold"><i class="fas fa-user me-1"></i> Cliente:</label>
+                    <select id="selectCliente" class="form-select form-select-lg" asp-items="ViewBag.IdCliente">
+                        <option value="">-- Seleccione un Cliente --</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="card bg-light border-0 mb-3">
+                <div class="card-body">
+                    <div class="row align-items-end">
+                        <div class="col-md-5">
+                            <label class="form-label fw-bold">Producto:</label>
+                            <select id="selectProducto" class="form-select" asp-items="ViewBag.ListaProductos">
+                                <option value="">-- Seleccione un Producto --</option>
+                            </select>
+                            <small class="text-muted" id="lblStock">Stock disponible: -</small>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label fw-bold">Precio:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="text" id="txtPrecio" class="form-control bg-white" readonly />
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label fw-bold">Cantidad:</label>
+                            <input type="number" id="txtCantidad" class="form-control" value="1" min="1" />
+                        </div>
+                        <div class="col-md-3 d-grid">
+                            <button class="btn btn-success fw-bold" id="btnAgregar" type="button">
+                                <i class="fas fa-plus-circle"></i> AGREGAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered align-middle" id="tablaCarrito">
+                    <thead class="table-dark text-center">
+                        <tr>
+                            <th>Producto</th>
+                            <th style="width: 100px;">Cant.</th>
+                            <th style="width: 150px;">Precio Unit.</th>
+                            <th style="width: 150px;">Subtotal</th>
+                            <th style="width: 80px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-end fw-bold fs-4">TOTAL A PAGAR:</td>
+                            <td class="text-end fw-bold fs-4 text-success" id="lblTotal">$ 0.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </div>
+        <div class="card-footer text-end py-3">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary me-2">Cancelar</a>
+            <button class="btn btn-primary btn-lg fw-bold px-5" id="btnTerminarVenta">
+                <i class="fas fa-save me-2"></i> TERMINAR VENTA
+            </button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+
+        const listaProductos = @Html.Raw(Json.Serialize(ViewBag.DatosProductos));
+
+        let totalVenta = 0.0;
+        let detallesVenta = [];
+
+        $(document).ready(function() {
+
+
+            $('#selectProducto').change(function() {
+                const idSeleccionado = parseInt($(this).val());
+
+                if(idSeleccionado) {
+
+                    const producto = listaProductos.find(p => p.id === idSeleccionado);
+
+                    if(producto) {
+                        $('#txtPrecio').val(producto.precioVenta.toFixed(2));
+                        $('#lblStock').text("Stock disponible: " + producto.stock).removeClass("text-danger");
+                        $('#txtCantidad').attr('max', producto.stock);
+                    }
+                } else {
+                    limpiarCamposProducto();
+                }
+            });
+
+
+            $('#btnAgregar').click(function() {
+                const idProducto = parseInt($('#selectProducto').val());
+                const nombreProducto = $("#selectProducto option:selected").text().split(" - ")[0]; 
+                const cantidad = parseInt($('#txtCantidad').val());
+                const precio = parseFloat($('#txtPrecio').val());
+
+
+                if (!idProducto) {
+                    Swal.fire('Atención', 'Seleccione un producto.', 'warning');
+                    return;
+                }
+                if (isNaN(cantidad) || cantidad < 1) {
+                    Swal.fire('Atención', 'Ingrese una cantidad válida.', 'warning');
+                    return;
+                }
+
+
+                const productoInfo = listaProductos.find(p => p.id === idProducto);
+                if (cantidad > productoInfo.stock) {
+                    Swal.fire('Stock Insuficiente', `Solo quedan ${productoInfo.stock} unidades.`, 'error');
+                    return;
+                }
+
+
+                if (detallesVenta.some(x => x.IdProducto === idProducto)) {
+                    Swal.fire('Atención', 'Este producto ya está en el carrito.', 'warning');
+                    return;
+                }
+
+                const subtotal = cantidad * precio;
+
+                const fila = `
+                    <tr id="fila-${idProducto}">
+                        <td>${nombreProducto}</td>
+                        <td class="text-center fw-bold">${cantidad}</td>
+                        <td class="text-end">$ ${precio.toFixed(2)}</td>
+                        <td class="text-end fw-bold">$ ${subtotal.toFixed(2)}</td>
+                        <td class="text-center">
+                            <button class="btn btn-outline-danger btn-sm btn-eliminar" data-id="${idProducto}" data-subtotal="${subtotal}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                $('#tablaCarrito tbody').append(fila);
+
+
+                detallesVenta.push({
+                    IdProducto: idProducto,
+                    Cantidad: cantidad,
+                    PrecioUnitario: precio
+                });
+
+                actualizarTotal(subtotal);
+                limpiarCamposProducto();
+            });
+
+
+            $(document).on('click', '.btn-eliminar', function() {
+                const id = $(this).data('id');
+                const subtotal = parseFloat($(this).data('subtotal'));
+
+
+                detallesVenta = detallesVenta.filter(p => p.IdProducto !== id);
+
+                $(`#fila-${id}`).remove();
+
+
+                actualizarTotal(-subtotal);
+            });
+
+
+            $('#btnTerminarVenta').click(function() {
+                const idCliente = $('#selectCliente').val();
+
+                if (!idCliente) {
+                    Swal.fire('Falta Cliente', 'Por favor seleccione un cliente.', 'warning');
+                    return;
+                }
+                if (detallesVenta.length === 0) {
+                    Swal.fire('Carrito Vacío', 'Agregue productos antes de guardar.', 'warning');
+                    return;
+                }
+
+                const ventaModelo = {
+                    IdCliente: parseInt(idCliente),
+                    Total: totalVenta,
+                    Detalles: detallesVenta
+                };
+
+                Swal.fire({
+                    title: 'Procesando...',
+                    text: 'Guardando la venta',
+                    allowOutsideClick: false,
+                    didOpen: () => { Swal.showLoading() }
+                });
+
+
+                $.ajax({
+                    url: '@Url.Action("GuardarVenta", "Ventas")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(ventaModelo),
+                    success: function(resp) {
+                        if (resp.success) {
+                            Swal.fire('¡Venta Exitosa!', 'El pedido se ha registrado correctamente.', 'success')
+                                .then(() => {
+
+                                    window.location.href = '@Url.Action("Index", "Pedidos")';
+                                });
+                        } else {
+                            Swal.fire('Error', resp.message, 'error');
+                        }
+                    },
+                    error: function() {
+                        Swal.fire('Error', 'Ocurrió un error al comunicarse con el servidor.', 'error');
+                    }
+                });
+            });
+
+
+            function actualizarTotal(monto) {
+                totalVenta += monto;
+                $('#lblTotal').text("$ " + totalVenta.toFixed(2));
+            }
+
+            function limpiarCamposProducto() {
+                $('#selectProducto').val("");
+                $('#txtCantidad').val(1);
+                $('#txtPrecio').val("");
+                $('#lblStock').text("Stock disponible: -");
+                $('#selectProducto').focus();
+            }
+        });
+    </script>
+}
