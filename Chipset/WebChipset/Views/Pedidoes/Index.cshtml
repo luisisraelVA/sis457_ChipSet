@@ -15,7 +15,13 @@
                 <i class="fas fa-cash-register"></i> Nueva Venta
             </a>
         </div>
-
+        <form asp-action="Index" method="get" class="mb-3">
+            <div class="input-group">
+                <input type="text" name="buscar" value="@ViewData["BusquedaActual"]" class="form-control" placeholder="Buscar por Cliente o Número de Pedido...">
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i> Buscar</button>
+                <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-sync"></i></a>
+            </div>
+        </form>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-hover table-bordered align-middle">

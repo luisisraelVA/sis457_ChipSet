@@ -28,40 +28,38 @@
     <link rel="stylesheet" href="~/WebChipset.styles.css" asp-append-version="true" />
 
     <style>
-        /* 1. Fondo blanco para toda la página */
+
         body {
             background-color: #ffffff !important;
         }
 
-        /* 2. Empujar el contenido hacia abajo (para que no lo tape el menú) */
         main {
             margin-top: 100px !important;
-            min-height: 80vh; /* Empuja el footer hacia el final */
+            min-height: 80vh;
             padding-bottom: 50px;
         }
 
-        /* 3. CAMBIAR EL FOOTER DE NEGRO A BLANCO */
         #footer {
-            background-color: #f8f9fa !important; /* Gris muy claro (casi blanco) */
-            color: #343a40 !important; /* Texto oscuro */
-            border-top: 1px solid #dee2e6; /* Línea superior sutil */
+            background-color: #f8f9fa !important;
+            color: #343a40 !important;
+            border-top: 1px solid #dee2e6;
         }
 
-            /* 4. Arreglar el color de los textos del footer (para que se vean sobre fondo claro) */
+
             #footer a,
             #footer h4,
             #footer strong,
             #footer .sitename,
             #footer p {
-                color: #343a40 !important; /* Texto negro/gris oscuro */
+                color: #343a40 !important;
             }
 
             #footer .copyright {
-                color: #6c757d !important; /* Gris medio */
+                color: #6c757d !important;
                 border-top: 1px solid #dee2e6;
             }
 
-            /* Iconos de redes sociales */
+
             #footer .social-links a {
                 background-color: #ffffff !important;
                 border: 1px solid #ced4da;
@@ -83,25 +81,68 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a asp-controller="Home" asp-action="Index" class="active">Inicio<br></a></li>
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
 
-                    <li class="dropdown">
-                        <a href="#"><span>Gestión</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a asp-controller="Productos" asp-action="Index">Inventario de Productos</a></li>
-                            <li><a asp-controller="Clientes" asp-action="Index">Cartera de Clientes</a></li>
-                            <li><a asp-controller="Proveedores" asp-action="Index">Proveedores</a></li>
-                            <li class="dropdown">
-                                <a href="#"><span>Configuración</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    <li><a asp-controller="Categorias" asp-action="Index">Categorías</a></li>
-                                    <li><a asp-controller="Roles" asp-action="Index">Roles</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    {
 
-                    <li><a asp-controller="Pedidoes" asp-action="Index">Historial Ventas</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Gestión</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a asp-controller="Productos" asp-action="Index">Inventario de Productos</a></li>
+                                <li><a asp-controller="Clientes" asp-action="Index">Cartera de Clientes</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a href="#">
+                                <i class="fas fa-shopping-cart me-1"></i> <span>Ventas</span>
+                                <i class="bi bi-chevron-down toggle-dropdown"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a asp-controller="Ventas" asp-action="NuevaVenta">
+                                        <i class="fas fa-cash-register me-2"></i> Nueva Venta 
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a asp-controller="Pedidoes" asp-action="Index">
+                                        <i class="fas fa-history me-2"></i> Ver Historial
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    }
                     <li><a href="#contact">Contacto</a></li>
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <li class="dropdown">
+                            <a href="#">
+                                <i class="fas fa-user-circle me-1"></i>
+                                <span>@User.Identity.Name</span>
+                                <i class="bi bi-chevron-down toggle-dropdown"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+                                        <a href="javascript:document.getElementById('logoutForm').submit();" class="text-danger">
+                                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                                        </a>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a asp-controller="Account" asp-action="Login" class="fw-bold text-primary">
+                                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                            </a>
+                        </li>
+                    }
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

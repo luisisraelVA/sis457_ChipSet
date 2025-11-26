@@ -1,0 +1,205 @@
+﻿@model WebChipset.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Acceso - ChipSet</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        
+        :root {
+            --chipset-black: #000000;
+            --chipset-dark: #111111;
+            --chipset-gray: #222222;
+            --chipset-gold: #ffc107;
+            --chipset-gold-hover: #e0a800;
+            --chipset-text: #ffffff;
+        }
+
+        body {
+            background-color: var(--chipset-black);
+            background-image: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Roboto", sans-serif;
+            color: var(--chipset-text);
+        }
+
+        .card-login {
+            background-color: var(--chipset-dark);
+            border: 1px solid #333;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(255, 193, 7, 0.1);
+            max-width: 400px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .card-header-login {
+            background-color: var(--chipset-black);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--chipset-gold); 
+        }
+
+        .logo-login {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--chipset-text);
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .logo-dot {
+            color: var(--chipset-gold);
+        }
+
+        .form-control {
+            background-color: var(--chipset-gray);
+            border: 1px solid #444;
+            color: #fff; 
+        }
+
+            .form-control:focus {
+                background-color: #333;
+                color: #fff;
+                border-color: var(--chipset-gold); 
+                box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+            }
+
+        
+        .input-group-text {
+            background-color: var(--chipset-gray);
+            border: 1px solid #444;
+            border-right: none;
+            color: #aaa;
+        }
+
+        .form-control {
+            border-left: none;
+        }
+
+            .form-control::placeholder {
+                color: #666;
+            }
+
+       
+        .btn-chipset {
+            background-color: var(--chipset-gold);
+            border: none;
+            color: #000; 
+            font-weight: 700;
+            padding: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+            .btn-chipset:hover {
+                background-color: var(--chipset-gold-hover);
+                color: #000;
+                transform: scale(1.02); 
+            }
+
+        .text-gold {
+            color: var(--chipset-gold) !important;
+        }
+
+        a.text-muted:hover {
+            color: var(--chipset-gold) !important;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--chipset-gold);
+            border-color: var(--chipset-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card card-login">
+
+                    <div class="card-header-login">
+                        <a href="#" class="logo-login">
+                            ChipSet<span class="logo-dot">.</span>
+                        </a>
+                        <p class="text-white-50 mt-1 mb-0 small">Hardware & Gaming</p>
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <form asp-action="Login" method="post">
+                            <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger bg-danger text-white border-0 small mb-3 py-2"></div>
+
+                            <div class="mb-3">
+                                <label asp-for="usuario" class="form-label fw-bold small text-white-50">USUARIO</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                    <input asp-for="usuario" class="form-control" placeholder="Ej: chipset" autocomplete="off" />
+                                </div>
+                                <span asp-validation-for="usuario" class="text-danger small"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="clave" class="form-label fw-bold small text-white-50">CONTRASEÑA</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input asp-for="clave" type="password" class="form-control" placeholder="••••••••" />
+                                </div>
+                                <span asp-validation-for="clave" class="text-danger small"></span>
+                            </div>
+
+                            <div class="mb-4 form-check">
+                                <input class="form-check-input" type="checkbox" asp-for="recordarme">
+                                <label class="form-check-label small text-white-50" asp-for="recordarme">
+                                    No cerrar sesión
+                                </label>
+                            </div>
+
+                            <div class="d-grid mb-3">
+                                <button type="submit" class="btn btn-chipset rounded-1">
+                                    INGRESAR AL SISTEMA
+                                </button>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <a asp-controller="Home" asp-action="Index" class="text-decoration-none small text-muted">
+                                    <i class="bi bi-arrow-left me-1"></i> Volver al inicio
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3 text-white-50 small" style="opacity: 0.3;">
+                    &copy; 2025 ChipSet Bolivia
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

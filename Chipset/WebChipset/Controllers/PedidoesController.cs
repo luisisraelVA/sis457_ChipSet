@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using WebChipset.Models;
 
 namespace WebChipset.Controllers
 {
+    [Authorize]
     public class PedidoesController : Controller
     {
         private readonly LabChipSetContext _context;
@@ -19,12 +21,23 @@ namespace WebChipset.Controllers
         }
 
         // GET: Pedidoes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-            var labChipSetContext = _context.Pedido.Include(p => p.IdClienteNavigation);
-            return View(await labChipSetContext.ToListAsync());
-        }
+            var query = _context.Pedido
+                .Include(p => p.IdClienteNavigation)
+                .AsQueryable();
 
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                // Busca por Nombre de Cliente O por Número de ID
+                query = query.Where(p =>
+                    p.IdClienteNavigation.Nombre.Contains(buscar) ||
+                    p.Id.ToString() == buscar);
+            }
+
+            ViewData["BusquedaActual"] = buscar;
+            return View(await query.OrderByDescending(p => p.FechaPedido).ToListAsync());
+        }
         // GET: Pedidoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {

@@ -13,16 +13,19 @@
         </div>
         <div class="card-body">
 
-
             <div class="row mb-4">
                 <div class="col-md-12">
                     <label class="form-label fw-bold"><i class="fas fa-user me-1"></i> Cliente:</label>
-                    <select id="selectCliente" class="form-select form-select-lg" asp-items="ViewBag.IdCliente">
-                        <option value="">-- Seleccione un Cliente --</option>
-                    </select>
+                    <div class="input-group">
+                        <select id="selectCliente" class="form-select form-select-lg" asp-items="ViewBag.IdCliente">
+                            <option value="">-- Seleccione un Cliente --</option>
+                        </select>
+                        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoCliente">
+                            <i class="fas fa-plus"></i> Nuevo
+                        </button>
+                    </div>
                 </div>
             </div>
-
 
             <div class="card bg-light border-0 mb-3">
                 <div class="card-body">
@@ -65,8 +68,7 @@
                             <th style="width: 80px;"></th>
                         </tr>
                     </thead>
-                    <tbody>
-                    </tbody>
+                    <tbody></tbody>
                     <tfoot>
                         <tr>
                             <td colspan="3" class="text-end fw-bold fs-4">TOTAL A PAGAR:</td>
@@ -76,7 +78,6 @@
                     </tfoot>
                 </table>
             </div>
-
         </div>
         <div class="card-footer text-end py-3">
             <a asp-controller="Home" asp-action="Index" class="btn btn-secondary me-2">Cancelar</a>
@@ -87,170 +88,167 @@
     </div>
 </div>
 
+<div class="modal fade" id="modalNuevoCliente" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title"><i class="fas fa-user-plus me-2"></i>Registrar Cliente Rápido</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formClienteRapido">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Nombre Completo</label>
+                        <input type="text" class="form-control" id="cliNombre" required placeholder="Ej: Juan Perez">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control" id="cliEmail" required placeholder="juan@email.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Teléfono</label>
+                        <input type="text" class="form-control" id="cliTelefono" placeholder="Ej: 77712345">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnGuardarCliente">Guardar y Seleccionar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="jsonProductosData" type="application/json">
+    @Html.Raw(Json.Serialize(ViewBag.DatosProductos))
+</script>
+
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-
-        const listaProductos = @Html.Raw(Json.Serialize(ViewBag.DatosProductos));
+        
+        let listaProductos = [];
+        const scriptData = document.getElementById("jsonProductosData");
+        if (scriptData && scriptData.textContent) {
+            listaProductos = JSON.parse(scriptData.textContent);
+        }
 
         let totalVenta = 0.0;
         let detallesVenta = [];
 
         $(document).ready(function() {
-
+ 
 
             $('#selectProducto').change(function() {
-                const idSeleccionado = parseInt($(this).val());
-
-                if(idSeleccionado) {
-
-                    const producto = listaProductos.find(p => p.id === idSeleccionado);
-
-                    if(producto) {
-                        $('#txtPrecio').val(producto.precioVenta.toFixed(2));
-                        $('#lblStock').text("Stock disponible: " + producto.stock).removeClass("text-danger");
-                        $('#txtCantidad').attr('max', producto.stock);
-                    }
-                } else {
-                    limpiarCamposProducto();
+                const valSeleccionado = $(this).val();
+                if (!valSeleccionado) { limpiarCamposProducto(); return; }
+                const idSeleccionado = parseInt(valSeleccionado);
+                const producto = listaProductos.find(p => (p.id || p.Id) === idSeleccionado);
+                if (producto) {
+                    const precio = producto.precioVenta || producto.PrecioVenta;
+                    const stock = producto.stock || producto.Stock;
+                    $('#txtPrecio').val(precio.toFixed(2));
+                    $('#lblStock').text("Stock disponible: " + stock).removeClass("text-danger");
+                    $('#txtCantidad').attr('max', stock).val(1);
                 }
             });
 
-
             $('#btnAgregar').click(function() {
-                const idProducto = parseInt($('#selectProducto').val());
-                const nombreProducto = $("#selectProducto option:selected").text().split(" - ")[0]; 
+
+                const valSeleccionado = $('#selectProducto').val();
+                if (!valSeleccionado) { Swal.fire('Atención', 'Seleccione un producto.', 'warning'); return; }
+                const idProducto = parseInt(valSeleccionado);
+                const nombreProducto = $("#selectProducto option:selected").text().split(" - ")[0];
                 const cantidad = parseInt($('#txtCantidad').val());
                 const precio = parseFloat($('#txtPrecio').val());
 
+                if (isNaN(cantidad) || cantidad < 1) { Swal.fire('Atención', 'Cantidad inválida.', 'warning'); return; }
 
-                if (!idProducto) {
-                    Swal.fire('Atención', 'Seleccione un producto.', 'warning');
-                    return;
-                }
-                if (isNaN(cantidad) || cantidad < 1) {
-                    Swal.fire('Atención', 'Ingrese una cantidad válida.', 'warning');
-                    return;
-                }
+                const productoInfo = listaProductos.find(p => (p.id || p.Id) === idProducto);
+                const stockReal = productoInfo.stock || productoInfo.Stock;
+                if (cantidad > stockReal) { Swal.fire('Stock', 'No hay suficiente stock.', 'error'); return; }
 
-
-                const productoInfo = listaProductos.find(p => p.id === idProducto);
-                if (cantidad > productoInfo.stock) {
-                    Swal.fire('Stock Insuficiente', `Solo quedan ${productoInfo.stock} unidades.`, 'error');
-                    return;
-                }
-
-
-                if (detallesVenta.some(x => x.IdProducto === idProducto)) {
-                    Swal.fire('Atención', 'Este producto ya está en el carrito.', 'warning');
-                    return;
-                }
+                if (detallesVenta.some(x => x.IdProducto === idProducto)) { Swal.fire('Atención', 'Producto ya agregado.', 'warning'); return; }
 
                 const subtotal = cantidad * precio;
+                const fila = `<tr id="fila-${idProducto}"><td>${nombreProducto}</td><td class="text-center fw-bold">${cantidad}</td><td class="text-end">$ ${precio.toFixed(2)}</td><td class="text-end fw-bold">$ ${subtotal.toFixed(2)}</td><td class="text-center"><button class="btn btn-outline-danger btn-sm btn-eliminar" data-id="${idProducto}" data-subtotal="${subtotal}"><i class="fas fa-trash"></i></button></td></tr>`;
 
-                const fila = `
-                    <tr id="fila-${idProducto}">
-                        <td>${nombreProducto}</td>
-                        <td class="text-center fw-bold">${cantidad}</td>
-                        <td class="text-end">$ ${precio.toFixed(2)}</td>
-                        <td class="text-end fw-bold">$ ${subtotal.toFixed(2)}</td>
-                        <td class="text-center">
-                            <button class="btn btn-outline-danger btn-sm btn-eliminar" data-id="${idProducto}" data-subtotal="${subtotal}">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                `;
                 $('#tablaCarrito tbody').append(fila);
-
-
-                detallesVenta.push({
-                    IdProducto: idProducto,
-                    Cantidad: cantidad,
-                    PrecioUnitario: precio
-                });
-
+                detallesVenta.push({ IdProducto: idProducto, Cantidad: cantidad, PrecioUnitario: precio });
                 actualizarTotal(subtotal);
                 limpiarCamposProducto();
             });
 
-
             $(document).on('click', '.btn-eliminar', function() {
                 const id = $(this).data('id');
                 const subtotal = parseFloat($(this).data('subtotal'));
-
-
                 detallesVenta = detallesVenta.filter(p => p.IdProducto !== id);
-
                 $(`#fila-${id}`).remove();
-
-
                 actualizarTotal(-subtotal);
             });
 
-
             $('#btnTerminarVenta').click(function() {
                 const idCliente = $('#selectCliente').val();
+                if (!idCliente) { Swal.fire('Falta Cliente', 'Seleccione un cliente.', 'warning'); return; }
+                if (detallesVenta.length === 0) { Swal.fire('Carrito Vacío', 'Agregue productos.', 'warning'); return; }
 
-                if (!idCliente) {
-                    Swal.fire('Falta Cliente', 'Por favor seleccione un cliente.', 'warning');
-                    return;
-                }
-                if (detallesVenta.length === 0) {
-                    Swal.fire('Carrito Vacío', 'Agregue productos antes de guardar.', 'warning');
-                    return;
-                }
+                const ventaModelo = { IdCliente: parseInt(idCliente), Total: totalVenta, Detalles: detallesVenta };
 
-                const ventaModelo = {
-                    IdCliente: parseInt(idCliente),
-                    Total: totalVenta,
-                    Detalles: detallesVenta
-                };
-
-                Swal.fire({
-                    title: 'Procesando...',
-                    text: 'Guardando la venta',
-                    allowOutsideClick: false,
-                    didOpen: () => { Swal.showLoading() }
-                });
-
+                Swal.fire({ title: 'Procesando...', didOpen: () => { Swal.showLoading() } });
 
                 $.ajax({
                     url: '@Url.Action("GuardarVenta", "Ventas")',
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify(ventaModelo),
+                    type: 'POST', contentType: 'application/json', data: JSON.stringify(ventaModelo),
                     success: function(resp) {
                         if (resp.success) {
-                            Swal.fire('¡Venta Exitosa!', 'El pedido se ha registrado correctamente.', 'success')
-                                .then(() => {
-
-                                    window.location.href = '@Url.Action("Index", "Pedidoes")';
-                                });
-                        } else {
-                            Swal.fire('Error', resp.message, 'error');
-                        }
+                            Swal.fire('Éxito', 'Venta registrada.', 'success').then(() => { window.location.href = '@Url.Action("Index", "Pedidoes")'; });
+                        } else { Swal.fire('Error', resp.message, 'error'); }
                     },
-                    error: function() {
-                        Swal.fire('Error', 'Ocurrió un error al comunicarse con el servidor.', 'error');
-                    }
+                    error: function() { Swal.fire('Error', 'Fallo en el servidor.', 'error'); }
                 });
             });
 
+            function actualizarTotal(monto) { totalVenta += monto; totalVenta = parseFloat(totalVenta.toFixed(2)); $('#lblTotal').text("$ " + totalVenta.toFixed(2)); }
+            function limpiarCamposProducto() { $('#selectProducto').val(""); $('#txtCantidad').val(1); $('#txtPrecio').val(""); $('#lblStock').text("Stock disponible: -"); }
 
-            function actualizarTotal(monto) {
-                totalVenta += monto;
-                $('#lblTotal').text("$ " + totalVenta.toFixed(2));
-            }
 
-            function limpiarCamposProducto() {
-                $('#selectProducto').val("");
-                $('#txtCantidad').val(1);
-                $('#txtPrecio').val("");
-                $('#lblStock').text("Stock disponible: -");
-                $('#selectProducto').focus();
-            }
+            $('#btnGuardarCliente').click(function() {
+                const nombre = $('#cliNombre').val();
+                const email = $('#cliEmail').val();
+                const telefono = $('#cliTelefono').val();
+
+                if (!nombre || !email) {
+                    Swal.fire('Faltan datos', 'El nombre y el email son obligatorios.', 'warning');
+                    return;
+                }
+
+                const nuevoCliente = { Nombre: nombre, Email: email, Telefono: telefono };
+
+                $.ajax({
+                    url: '/Clientes/CrearRapido', 
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(nuevoCliente),
+                    success: function(response) {
+                        if (response.success) {
+    
+                            const nuevaOpcion = `<option value="${response.data.id}" selected>${response.data.nombre}</option>`;
+                            $('#selectCliente').append(nuevaOpcion);
+
+                            $('#modalNuevoCliente').modal('hide');
+                            $('#formClienteRapido')[0].reset();
+
+                            Swal.fire('Listo', 'Cliente creado y seleccionado.', 'success');
+                        } else {
+                            Swal.fire('Error', response.message, 'error');
+                        }
+                    },
+                    error: function() {
+                        Swal.fire('Error', 'No se pudo registrar el cliente.', 'error');
+                    }
+                });
+            });
         });
     </script>
 }

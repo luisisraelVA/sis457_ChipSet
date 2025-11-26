@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WebChipset.Models;
 using WebChipset.Models.ViewModels;
 
 namespace WebChipset.Controllers
 {
+    [Authorize]
     public class VentasController : Controller
     {
         private readonly LabChipSetContext _context;

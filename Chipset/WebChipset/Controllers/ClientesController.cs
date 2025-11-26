@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using WebChipset.Models;
 
 namespace WebChipset.Controllers
 {
+    [Authorize]
     public class ClientesController : Controller
     {
         private readonly LabChipSetContext _context;
@@ -55,6 +57,11 @@ namespace WebChipset.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Email,Telefono,UsuarioRegistro,FechaRegistro,Estado")] Cliente cliente)
         {
+            bool existeEmail = _context.Cliente.Any(c => c.Email == cliente.Email);
+            if (existeEmail)
+            {
+                ModelState.AddModelError("Email", "Este correo ya está registrado.");
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(cliente);
@@ -151,6 +158,34 @@ namespace WebChipset.Controllers
         private bool ClienteExists(int id)
         {
             return _context.Cliente.Any(e => e.Id == id);
+        }
+
+        // POST: Clientes/CrearRapido
+        [HttpPost]
+        public async Task<IActionResult> CrearRapido([FromBody] Cliente cliente)
+        {
+            ModelState.Remove("UsuarioRegistro");
+            ModelState.Remove("FechaRegistro");
+            ModelState.Remove("Pedido"); 
+            bool existeEmail = _context.Cliente.Any(c => c.Email == cliente.Email);
+            if (existeEmail)
+            {
+                return Json(new { success = false, message = "Ese correo ya está registrado." });
+            }
+
+            if (ModelState.IsValid)
+            {
+                cliente.FechaRegistro = DateTime.Now;
+                cliente.UsuarioRegistro = User.Identity?.Name ?? "Vendedor";
+                cliente.Estado = 1;
+
+                _context.Add(cliente);
+                await _context.SaveChangesAsync();
+
+                return Json(new { success = true, data = new { id = cliente.Id, nombre = cliente.Nombre } });
+            }
+
+            return Json(new { success = false, message = "Datos inválidos. Revise los campos." });
         }
     }
 }

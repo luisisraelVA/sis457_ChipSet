@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using WebChipset.Models;
 
 namespace WebChipset.Controllers
 {
+    [Authorize]
     public class ProductosController : Controller
     {
         private readonly LabChipSetContext _context;
@@ -77,8 +79,14 @@ namespace WebChipset.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,IdProveedor,IdCategoria,Nombre,Descripcion,PrecioVenta,Stock,UsuarioRegistro,FechaRegistro,Estado")] Producto producto)
         {
+            bool existeNombre = _context.Producto.Any(p => p.Nombre == producto.Nombre && p.Estado == 1);
+
+            if (existeNombre)
+            {
+                ModelState.AddModelError("Nombre", "Ya existe un producto con este nombre en el inventario.");
+            }
             producto.FechaRegistro = DateTime.Now;
-            producto.UsuarioRegistro = "Admin";
+            producto.UsuarioRegistro = User.Identity.Name ?? "Admin";
 
             ModelState.Remove("IdCategoriaNavigation");
             ModelState.Remove("IdProveedorNavigation");
