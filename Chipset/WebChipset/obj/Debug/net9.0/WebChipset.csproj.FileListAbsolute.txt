@@ -600,7 +600,6 @@ C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\rj
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\scopedcss\bundle\WebChipset.styles.css
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\scopedcss\projectbundle\WebChipset.bundle.scp.css
-C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\9n7nacbkly-lugek5hnai.gz
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\3tlmweaktm-61n19gt1b8.gz
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\c1gow31kgj-fr7q2aak1r.gz
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\utdn76lz3v-bqjiyaj88i.gz
@@ -814,3 +813,4 @@ C:\Users\stopg\Desktop\Lab_SIS457\Chipset\WebChipset\obj\Debug\net9.0\compressed
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\WebChipset\obj\Debug\net9.0\compressed\91lxu7xkrj-9wtfm7j0ok.gz
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\WebChipset\obj\Debug\net9.0\compressed\wn64dd0az1-vjom3bl46k.gz
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\WebChipset\obj\Debug\net9.0\compressed\9n7nacbkly-f4aqpm0f6j.gz
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\9n7nacbkly-ukxcqiv13c.gz

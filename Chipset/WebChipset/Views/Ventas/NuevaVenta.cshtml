@@ -2,7 +2,8 @@
     ViewData["Title"] = "Nueva Venta";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 <div class="container mt-4">
@@ -125,9 +126,9 @@
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        
+
         let listaProductos = [];
         const scriptData = document.getElementById("jsonProductosData");
         if (scriptData && scriptData.textContent) {
@@ -138,8 +139,13 @@
         let detallesVenta = [];
 
         $(document).ready(function() {
- 
 
+            $('#selectProducto').select2({
+                theme: 'bootstrap-5',      
+                width: '100%',             
+                placeholder: "Buscar un producto...", 
+                allowClear: true           
+            });
             $('#selectProducto').change(function() {
                 const valSeleccionado = $(this).val();
                 if (!valSeleccionado) { limpiarCamposProducto(); return; }
@@ -226,13 +232,13 @@
                 const nuevoCliente = { Nombre: nombre, Email: email, Telefono: telefono };
 
                 $.ajax({
-                    url: '/Clientes/CrearRapido', 
+                    url: '/Clientes/CrearRapido',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(nuevoCliente),
                     success: function(response) {
                         if (response.success) {
-    
+
                             const nuevaOpcion = `<option value="${response.data.id}" selected>${response.data.nombre}</option>`;
                             $('#selectCliente').append(nuevaOpcion);
 
