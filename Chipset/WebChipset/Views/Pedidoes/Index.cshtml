@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<div class="container mt-4">
+<div class="container mt-5 pt-5">
     <div class="card shadow-sm">
         <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
             <h3 class="mb-0"><i class="fas fa-history me-2"></i>Historial de Ventas</h3>
@@ -57,7 +57,7 @@
                                     }
                                 </td>
                                 <td class="text-center">
-                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm text-white" title="Ver Productos">
+                                    <a asp-controller="Pedidoes" asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm text-white" title="Ver Productos">
                                         <i class="fas fa-eye"></i> Ver Detalle
                                     </a>
                                 </td>
