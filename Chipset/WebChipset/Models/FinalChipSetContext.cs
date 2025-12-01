@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebChipset.Models;
 
-public partial class LabChipSetContext : DbContext
+public partial class FinalChipSetContext : DbContext
 {
-    public LabChipSetContext()
+    public FinalChipSetContext()
     {
     }
 
-    public LabChipSetContext(DbContextOptions<LabChipSetContext> options)
+    public FinalChipSetContext(DbContextOptions<FinalChipSetContext> options)
         : base(options)
     {
     }
@@ -32,7 +32,7 @@ public partial class LabChipSetContext : DbContext
     public virtual DbSet<Usuario> Usuario { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=localhost;Database=LabChipSet;User ID=usrchipset;Password=123456; TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=localhost;Database=FinalChipSet;User ID=usrchipset;Password=123456; TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

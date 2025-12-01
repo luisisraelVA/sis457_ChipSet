@@ -13,9 +13,9 @@ namespace WebChipset.Controllers
     [Authorize]
     public class ClientesController : Controller
     {
-        private readonly LabChipSetContext _context;
+        private readonly FinalChipSetContext _context;
 
-        public ClientesController(LabChipSetContext context)
+        public ClientesController(FinalChipSetContext context)
         {
             _context = context;
         }
