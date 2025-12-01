@@ -674,7 +674,6 @@ C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\re
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\WebChipset.pdb
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\WebChipset.genruntimeconfig.cache
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\ref\WebChipset.dll
-C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\7m0zmd16oi-xswlviy8mn.gz
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\rxp51q1z4a-2i03oj9l62.gz
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\iysryr9yhv-zbs6djb9eg.gz
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\u4lh8m9cxm-jfm3rcjzyc.gz
@@ -814,3 +813,4 @@ C:\Users\stopg\Desktop\Lab_SIS457\Chipset\WebChipset\obj\Debug\net9.0\compressed
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\WebChipset\obj\Debug\net9.0\compressed\wn64dd0az1-vjom3bl46k.gz
 C:\Users\stopg\Desktop\Lab_SIS457\Chipset\WebChipset\obj\Debug\net9.0\compressed\9n7nacbkly-f4aqpm0f6j.gz
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\9n7nacbkly-ukxcqiv13c.gz
+C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\obj\Debug\net9.0\compressed\7m0zmd16oi-xswlviy8mn.gz

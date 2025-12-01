@@ -28,13 +28,15 @@
     <link rel="stylesheet" href="~/WebChipset.styles.css" asp-append-version="true" />
 
     <style>
-
+        /* ================================== */
+        /* ESTILOS DE LAYOUT GENERALES        */
+        /* ================================== */
         body {
             background-color: #ffffff !important;
         }
 
         main {
-            margin-top: 100px !important;
+            margin-top: 80px !important; /* Ajuste el margen superior para el header fijo */
             min-height: 80vh;
             padding-bottom: 50px;
         }
@@ -44,7 +46,6 @@
             color: #343a40 !important;
             border-top: 1px solid #dee2e6;
         }
-
 
             #footer a,
             #footer h4,
@@ -59,11 +60,92 @@
                 border-top: 1px solid #dee2e6;
             }
 
-
             #footer .social-links a {
                 background-color: #ffffff !important;
                 border: 1px solid #ced4da;
                 color: #343a40 !important;
+            }
+
+        
+        #header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://png.pngtree.com/background/20240807/original/pngtree-simplistic-blue-web-search-3d-rendered-minimal-background-picture-image_10002168.jpg'); /* ⬅️ RUTA DE TU IMAGEN REAL */
+
+            background-color: #121212; 
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            padding: 15px 0;
+            z-index: 997;
+        }
+
+        
+        .logo .sitename {
+            font-size: 28px;
+            font-weight: 700;
+            color: #f0f0f0;
+            font-family: 'Poppins', sans-serif; 
+            text-transform: uppercase;
+        }
+
+        .logo-icon {
+            font-size: 24px;
+            color: #00bcd4; 
+            margin-right: 8px;
+        }
+
+        .navmenu a {
+            color: #b0b0b0; 
+            font-size: 16px;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+            .navmenu a:hover, .navmenu .active {
+                color: #ffffff;
+            }
+
+        .navmenu .active {
+            border-bottom: 2px solid #00bcd4; 
+            padding-bottom: 8px;
+        }
+
+       
+        .navmenu .dropdown ul {
+            background-color: #1c1c1c;
+            border: 1px solid #333;
+            border-top: 0;
+        }
+
+            .navmenu .dropdown ul li a {
+                color: #b0b0b0;
+                padding: 10px 20px;
+            }
+
+                .navmenu .dropdown ul li a:hover {
+                    color: #00bcd4;
+                    background-color: #2c2c2c;
+                }
+
+        
+        .btn-login {
+            background-color: #00bcd4;
+            color: #121212 !important;
+            padding: 8px 20px !important;
+            margin-left: 20px;
+            border-radius: 5px;
+            font-weight: 700 !important;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+        }
+
+            .btn-login:hover {
+                background-color: #00a0b0;
+                transform: translateY(-2px);
+                color: #121212 !important;
             }
     </style>
 </head>
@@ -74,17 +156,15 @@
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
             <a asp-controller="Home" asp-action="Index" class="logo d-flex align-items-center me-auto me-lg-0">
+                <i class="fas fa-microchip logo-icon me-2"></i>
                 <h1 class="sitename">ChipSet</h1>
-                <span>.</span>
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a asp-controller="Home" asp-action="Index" class="active">Inicio<br></a></li>
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
-
                     {
-
                         <li class="dropdown">
                             <a href="#"><span>Gestión</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
@@ -92,7 +172,6 @@
                                 <li><a asp-controller="Clientes" asp-action="Index">Cartera de Clientes</a></li>
                             </ul>
                         </li>
-
 
                         <li class="dropdown">
                             <a href="#">
@@ -102,10 +181,9 @@
                             <ul>
                                 <li>
                                     <a asp-controller="Ventas" asp-action="NuevaVenta">
-                                        <i class="fas fa-cash-register me-2"></i> Nueva Venta 
+                                        <i class="fas fa-cash-register me-2"></i> Nueva Venta
                                     </a>
                                 </li>
-
                                 <li>
                                     <a asp-controller="Pedidoes" asp-action="Index">
                                         <i class="fas fa-history me-2"></i> Ver Historial
@@ -113,7 +191,6 @@
                                 </li>
                             </ul>
                         </li>
-
                     }
                     <li><a href="#contact">Contacto</a></li>
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
@@ -138,8 +215,8 @@
                     else
                     {
                         <li>
-                            <a asp-controller="Account" asp-action="Login" class="fw-bold text-primary">
-                                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                            <a asp-controller="Account" asp-action="Login" class="btn-login">
+                                <i class="fas fa-sign-in-alt me-1"></i> Iniciar Sesión
                             </a>
                         </li>
                     }
@@ -153,8 +230,6 @@
     <main class="main">
         @RenderBody()
     </main>
-
-
 
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

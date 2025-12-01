@@ -10,6 +10,7 @@ wwwroot\assets\img\clients\client-6.png
 wwwroot\assets\img\clients\client-7.png
 wwwroot\assets\img\clients\client-8.png
 wwwroot\assets\img\cta-bg.jpg
+wwwroot\assets\img\favicon.png
 wwwroot\assets\img\features-bg.jpg
 wwwroot\assets\img\hero-bg.jpg
 wwwroot\assets\img\logo.png
@@ -172,7 +173,6 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\assets\img\favicon.png
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\wwwroot\css\site.css
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\wwwroot\favicon.ico
 C:\Users\LENOVO 00\Desktop\sis457_ChipSet\ChipSet\WebChipset\wwwroot\js\site.js
